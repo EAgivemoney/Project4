@@ -1,35 +1,21 @@
-//we krijgen 5-10 verschillende stocks
-
-//deze hebben allemaal een waarde
-
-//deze kunnen we kopen of verkopen
-
-//deze waardes veranderen alleen iedere ingame "dag"
-
-//voor iedere stock zal er een voorspelling zijn voor hoe de verandering er voor de volgende dag uit zal zien
-
-//afhankelijk van hoe risicovol de stock is zal deze voorspelling uitkomen in veel ergere of betere omstandigheden
-
-//ik denk na over 2 powerups
-
-//1 om de voorspelling 100% zeker uit te laten komen
-
-//1 om erachter te komen wat het echte getal is met hoeveel de stock verandert
-
-/*
-Microsoft Corporation
-Alphabet Inc. 
-Amazon.com Inc.
-Facebook, Inc.
-Nvidia Corporation
-Intel Corporation
-Cisco Systems, Inc.
-Adobe Inc.
-IBM (International Business Machines Corporation)
-*/
 console.log("Het bestand wordt ingeladen");
 
 let Balenciaga = 500;
+
+// Array voor de waarden van de aandelen
+const aandelen = [
+    {
+        naam: "Apple",
+        waarde: 100,
+        marktschatting: 100
+    },
+    {
+        naam: "Nintendo",
+        waarde: 80, // Andere waarde voor Nintendo
+        marktschatting: 95
+    }
+];
+
 const waardeSpans = document.querySelectorAll(".waarde");
 const marktschattingSpans = document.querySelectorAll(".marktschatting");
 const stabiliteitSpans = document.querySelectorAll(".stabiliteit");
@@ -37,35 +23,39 @@ const kopenKnoppen = document.querySelectorAll(".kopen");
 const verkopenKnoppen = document.querySelectorAll(".verkopen");
 const aandelenSpans = document.querySelectorAll(".aandelen");
 
+// Functie om de initiële waarden van de aandelen in te stellen
+function initializeStocks() {
+    aandelen.forEach(function(aandeel, index) {
+        waardeSpans[index].textContent = aandeel.waarde.toFixed(2);
+        marktschattingSpans[index].textContent = aandeel.marktschatting;
+    });
+}
+
+initializeStocks();
+
 document.getElementById("confirmBtn").addEventListener("click", function() {
     // Loop door alle aandelen
-    waardeSpans.forEach(function(waardeSpan, index) {
-        // Verkrijg willekeurige stabiliteit
-        var randomStabiliteit = Math.random() < 0.5 ? "hoog" : "laag";
-        
-        var minMarktschatting = 95; // Minimale marktschatting
-        var maxMarktschatting = 110; // Maximale marktschatting
-        var randomMarktschatting = Math.floor(Math.random() * (maxMarktschatting - minMarktschatting + 1)) + minMarktschatting; 
+    aandelen.forEach(function(aandeel, index) {
+        var randomMarktschatting = Math.floor(Math.random() * (110 - 95 + 1)) + 95; // Willekeurige marktschatting tussen 95 en 110
 
-        var maxSchommeling = randomStabiliteit === "hoog" ? 1.35 : 1.15;
-        var minSchommeling = randomStabiliteit === "hoog" ? 0.80 : 0.90;
+        var maxSchommeling = aandeel.stabiliteit === "hoog" ? 1.35 : 1.15;
+        var minSchommeling = aandeel.stabiliteit === "hoog" ? 0.80 : 0.90;
 
         var Schommeling = Math.random() * (maxSchommeling - minSchommeling) + minSchommeling; 
         
-        if(parseFloat(waardeSpan.textContent) < 50) {
+        if(parseFloat(waardeSpans[index].textContent) < 50) {
             Schommeling = 1.1;
         }
         
-        var Waarde = (parseFloat(waardeSpan.textContent) * (randomMarktschatting/100 * Schommeling)).toFixed(2);
+        var Waarde = (parseFloat(waardeSpans[index].textContent) * (randomMarktschatting/100 * Schommeling)).toFixed(2);
 
-        if((Waarde - parseFloat(waardeSpan.textContent)) > 200) {
-            Waarde = (parseFloat(waardeSpan.textContent) + 200).toFixed(2);
+        if((Waarde - parseFloat(waardeSpans[index].textContent)) > 200) {
+            Waarde = (parseFloat(waardeSpans[index].textContent) + 200).toFixed(2);
         }
 
         // Update de waarden in de HTML
-        waardeSpan.textContent = Waarde;
+        waardeSpans[index].textContent = Waarde;
         marktschattingSpans[index].textContent = randomMarktschatting;
-        stabiliteitSpans[index].textContent = randomStabiliteit;
     });
 });
 
