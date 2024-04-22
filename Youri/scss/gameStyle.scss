@@ -1,0 +1,18 @@
+body{
+    background-color: wheat;
+    .game{
+        .game-window{
+           .stock-market{
+            display: flex;
+            background-color: white;
+                flex-direction: row;
+                div{
+                    img{
+                        height: 20%;
+                        max-width: 80%;
+                    }
+                }
+            }
+        }
+    }
+}
