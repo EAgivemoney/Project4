@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
       item.addEventListener("click", function() {
           this.classList.toggle("active");
           const span = this.querySelector("span.small");
-          span.textContent = this.classList.contains("active") ? " - Click to contract" : " - Click to expand";
+          span.textContent = this.classList.contains("active") ? " ↓" : " ^";
       });
   });
 });
