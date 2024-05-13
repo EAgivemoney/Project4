@@ -70,6 +70,10 @@ h1 {
   color: #999;
 }
 
+.class-list {
+  list-style-type: none;
+}
+
 @media screen and (min-width: 992px) {
   .container {
     display: flex;
