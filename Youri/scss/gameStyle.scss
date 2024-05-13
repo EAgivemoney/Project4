@@ -1,3 +1,6 @@
+@use "flex-grid";
+@use "conf";
+
 body{
     background-color: wheat;
     .game{
@@ -5,14 +8,13 @@ body{
            .stock-market{
             display: flex;
             background-color: white;
-                flex-direction: row;
-                div{
+            flex-direction: row;
+                .stock{
+                    display: flex;
+                    padding: 0;
                     text-align: center;
                     border: 0.1rem solid black;
-                    img{
-                        height: 20%;
-                        max-width: 80%;
-                    }
+                    justify-content: center; 
                 }
             }
         }
