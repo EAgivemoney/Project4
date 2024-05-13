@@ -1,0 +1,156 @@
+.flex-container {
+    display: flex;
+  }
+  
+  .flex-container.column {
+    flex-direction: column;
+  }
+  
+  .flex-container.row-reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .flex-container.column-reverse {
+    flex-direction: column-reverse;
+  }
+  
+  .flex-container.wrap {
+    flex-wrap: wrap;
+  }
+  
+  .flex-container.wrap-reverse {
+    flex-wrap: wrap-reverse;
+  }
+  
+  .flex-container.justify-start {
+    justify-content: flex-start;
+  }
+  
+  .flex-container.justify-end {
+    justify-content: flex-end;
+  }
+  
+  .flex-container.justify-center {
+    justify-content: center;
+  }
+  
+  .flex-container.justify-space-between {
+    justify-content: space-between;
+  }
+  
+  .flex-container.justify-space-around {
+    justify-content: space-around;
+  }
+  
+  .flex-container.justify-space-evenly {
+    justify-content: space-evenly;
+  }
+  
+  .flex-container.align-start {
+    align-items: flex-start;
+  }
+  
+  .flex-container.align-end {
+    align-items: flex-end;
+  }
+  
+  .flex-container.align-center {
+    align-items: center;
+  }
+  
+  .flex-container.align-baseline {
+    align-items: baseline;
+  }
+  
+  .flex-container.align-stretch {
+    align-items: stretch;
+  }
+  
+  .flex-container.align-content-start {
+    align-content: flex-start;
+  }
+  
+  .flex-container.align-content-end {
+    align-content: flex-end;
+  }
+  
+  .flex-container.align-content-center {
+    align-content: center;
+  }
+  
+  .flex-container.align-content-space-between {
+    align-content: space-between;
+  }
+  
+  .flex-container.align-content-space-around {
+    align-content: space-around;
+  }
+  
+  .flex-container.align-content-stretch {
+    align-content: stretch;
+  }
+  
+  // Flex Item Options
+  .flex-item {
+    flex: 1;
+  }
+  
+  .flex-item.order-1 {
+    order: 1;
+  }
+  
+  .flex-item.order-2 {
+    order: 2;
+  }
+  
+  .flex-item.order-3 {
+    order: 3;
+  }
+  
+  .flex-item.order-4 {
+    order: 4;
+  }
+  
+  .flex-item.order-5 {
+    order: 5;
+  }
+  
+  .flex-item.order-6 {
+    order: 6;
+  }
+  
+  .flex-item.order-7 {
+    order: 7;
+  }
+  
+  .flex-item.order-8 {
+    order: 8;
+  }
+  
+  .flex-item.order-9 {
+    order: 9;
+  }
+  
+  .flex-item.order-10 {
+    order: 10;
+  }
+  
+  .flex-item.align-self-start {
+    align-self: flex-start;
+  }
+  
+  .flex-item.align-self-end {
+    align-self: flex-end;
+  }
+  
+  .flex-item.align-self-center {
+    align-self: center;
+  }
+  
+  .flex-item.align-self-baseline {
+    align-self: baseline;
+  }
+  
+  .flex-item.align-self-stretch {
+    align-self: stretch;
+  }
