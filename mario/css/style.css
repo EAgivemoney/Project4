@@ -1,0 +1,254 @@
+
+*body{
+    margin: 0px;
+ }
+*{
+    box-sizing: border-box;
+}
+
+ 
+body{
+    height: 95vh;
+    background:rgb(255, 255, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    display:flex;
+    flex-direction: column;
+}
+ 
+header{
+    
+        padding: 0em 0 0em 0;
+    }  
+    
+footer{
+        background: darkgoldenrod;
+        padding:1em 0 1em 0;
+    }
+
+/* Set the position of the main element to relative */
+main {
+    position: relative;
+    padding-top: 0px; /* Add some padding to separate content from the header */
+    padding-bottom: 3rem;
+}
+
+/* Styling for the background image */
+.bg-image {
+    
+    position:relative;
+    background-color: #f6f6f6;
+    background-image: url(../fotos/p4picture2.jpg);
+    background-repeat: no-repeat;
+    background-size: 1400 740;
+    
+    
+    color: white;
+  
+    padding-top: 200px;
+    padding-bottom: 200px;
+   
+  }
+  
+/* begin van boxes and content classes en eind van header, footer, background images en banners */
+
+
+.content{
+    display: grid;
+    /*grid-template-columns: 33.3% 33.3% 33.3%;*/
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    max-width: 960px;
+    margin: 0 auto;
+    padding:1em 0 1em 0;
+    flex: 1 1 100px;
+
+    background-color: #20813a;
+  }
+
+/* Styling for the container */
+.containerB {
+    max-width:100%; /* Set maximum width of the container */
+    margin: auto; /* Center the container horizontally */
+    padding-left: 0; /* Add left padding */
+    padding-right: 0; /* Remove right padding */
+    background-color: #1daeec;
+}
+
+.containerLB {
+    max-width: 100%; /* Set maximum width of the container */
+    margin: auto; /* Center the container horizontally */
+    padding-left: 25rem; /* Add left padding */
+    padding-right: 20rem; /* Remove right padding */
+    background-color: #a3e2fc;
+}
+
+.info-1 {
+    width: 75%; /* Set the width of the box */
+    height: auto; /* Change height to auto to accommodate content */
+    margin-top: 30px; /* Add top margin */
+    border-bottom-style:solid;
+    border-width: 0.5px;
+    border-color: silver;
+    margin: auto; /* Center the box horizontally */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-around; /* Space items evenly horizontally */
+}
+
+.info-2 {
+    width: 75%; /* Set the width of the box */
+    height: auto; /* Change height to auto to accommodate content */
+    margin-top: 30px; /* Add top margin */
+    border-bottom-style:solid;
+    border-width: 0.5px;
+    border-color: silver;
+    margin: auto; /* Center the box horizontally */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-around; /* Space items evenly horizontally */
+}
+
+.info-3 {
+    width: 75%; /* Set the width of the box */
+    height: auto; /* Change height to auto to accommodate content */
+    margin-top: 30px; /* Add top margin */
+    border-bottom-style:solid;
+    border-width: 0.5px;
+    border-color: silver;
+    margin: auto; /* Center the box horizontally */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-around; /* Space items evenly horizontally */
+}
+
+.info-4 {
+    width: 75%; /* Set the width of the box */
+    height: auto; /* Change height to auto to accommodate content */
+    margin-top: 30px; /* Add top margin */
+    border-bottom-style:solid;
+    border-width: 0.5px;
+    border-color: silver;
+    margin: auto; /* Center the box horizontally */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-around; /* Space items evenly horizontally */
+}
+
+.item-1 {
+    width: 100%; /* Adjust width to fit content better */
+    padding: 20px; /* Increase padding for better readability */
+    text-align: center; /* Center align text */
+    border-radius: 10px; /* Add rounded corners */
+}
+
+.item-2 {
+    width: 90%; /* Adjust width to fit content better */
+    padding: 20px; /* Increase padding for better readability */
+    text-align: center; /* Center align text */
+    border-radius: 10px; /* Add rounded corners */
+    margin-top: 0px; /* Adjust margin-top to create space between the boxes */
+}
+
+.wrapper-PI {  
+    width: 105px;
+    margin: 0 auto;
+    color: rgb(255, 255, 255);
+}
+
+.label{
+    align-content: left;
+    text-overflow: ellipsis;
+}
+
+.containerM{
+   
+    max-width: 1400px;
+    margin-top: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 0;
+  
+  }
+
+  .box-2{
+    width: 30%;
+    height: 600px;
+    
+    margin-top: 30px;
+    margin: auto;
+    border: 10px;
+
+  
+}
+
+  .Bitem-1, .Bitem-2, .Bitem-3{
+    width: 520px;
+    height: 600x;
+    padding: 10;
+    text-align:center;
+    border: 10px;
+    border-radius: 10px;
+    margin-top: 10rem;
+    margin: auto;
+
+  }
+  .colerblue{
+    max-width: 100%; /* Set maximum width of the container */
+    background-color: #a3e2fc;
+    padding-bottom: 3rem;
+  }
+
+  .containerM{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+
+  }
+
+
+.video {
+    
+       width: 750px;; /* Set the width of the box */
+    height: 400px; /* Change height to auto to accommodate content */
+    margin-top: 1000px; /* Add top margin */
+    margin: auto; /* Center the box horizontally */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-around; /* Space items evenly horizontally */
+    background-color: rgb(120, 116, 116);
+}
+
+
+/* div{
+    background-color: rgb(255, 0, 0);
+    height: 150px;
+    width: 150px;
+    border: 5px solid rgb(0, 0, 0);
+    float:left;
+    margin: 20px;
+}
+
+<style>
+    body{
+    color: #fff;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+
+  }
+
+    #content{
+      display: grid;
+      grid-template-columns: 33.3%33.3%33.3%;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    #content div{
+      background: #3bbced;
+      padding: 30px;
+    }
+
+    #content div:nth-child(even){
+      background: #777;
+    }
+
+  </style>
