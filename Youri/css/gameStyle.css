@@ -6,6 +6,10 @@ body .game .game-window .stock-market {
   background-color: white;
   flex-direction: row;
 }
+body .game .game-window .stock-market div {
+  text-align: center;
+  border: 0.1rem solid black;
+}
 body .game .game-window .stock-market div img {
   height: 20%;
   max-width: 80%;
