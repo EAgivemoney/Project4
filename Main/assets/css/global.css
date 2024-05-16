@@ -313,160 +313,140 @@
     width: 100%;
   }
 }
-.flex-container {
-  display: flex;
+.fw-wrap {
+  flex-wrap: wrap !important;
 }
 
-.flex-container.column {
-  flex-direction: column;
+.fw-nowrap {
+  flex-wrap: nowrap !important;
 }
 
-.flex-container.row-reverse {
-  flex-direction: row-reverse;
+.fd-row {
+  flex-direction: row !important;
 }
 
-.flex-container.column-reverse {
-  flex-direction: column-reverse;
+.fd-row-r {
+  flex-direction: row-reverse !important;
 }
 
-.flex-container.wrap {
-  flex-wrap: wrap;
+.fd-column {
+  flex-direction: column !important;
 }
 
-.flex-container.wrap-reverse {
-  flex-wrap: wrap-reverse;
+.fd-column-r {
+  flex-direction: column-reverse !important;
 }
 
-.flex-container.justify-start {
-  justify-content: flex-start;
+.jc-initial {
+  justify-content: initial !important;
 }
 
-.flex-container.justify-end {
-  justify-content: flex-end;
+.jc-inherit {
+  justify-content: inherit !important;
 }
 
-.flex-container.justify-center {
-  justify-content: center;
+.jc-flex-start {
+  justify-content: flex-start !important;
 }
 
-.flex-container.justify-space-between {
-  justify-content: space-between;
+.jc-flex-end {
+  justify-content: flex-end !important;
 }
 
-.flex-container.justify-space-around {
-  justify-content: space-around;
+.jc-center {
+  justify-content: center !important;
 }
 
-.flex-container.justify-space-evenly {
-  justify-content: space-evenly;
+.jc-space-between {
+  justify-content: space-between !important;
 }
 
-.flex-container.align-start {
-  align-items: flex-start;
+.jc-space-around {
+  justify-content: space-around !important;
 }
 
-.flex-container.align-end {
-  align-items: flex-end;
+.jc-space-evenly {
+  justify-content: space-evenly !important;
 }
 
-.flex-container.align-center {
-  align-items: center;
+.ac-initial {
+  align-content: initial !important;
 }
 
-.flex-container.align-baseline {
-  align-items: baseline;
+.ac-inherit {
+  align-content: inherit !important;
 }
 
-.flex-container.align-stretch {
-  align-items: stretch;
+.ac-flex-start {
+  align-content: flex-start !important;
 }
 
-.flex-container.align-content-start {
-  align-content: flex-start;
+.ac-flex-end {
+  align-content: flex-end !important;
 }
 
-.flex-container.align-content-end {
-  align-content: flex-end;
+.ac-center {
+  align-content: center !important;
 }
 
-.flex-container.align-content-center {
-  align-content: center;
+.ac-space-between {
+  align-content: space-between !important;
 }
 
-.flex-container.align-content-space-between {
-  align-content: space-between;
+.ac-space-around {
+  align-content: space-around !important;
 }
 
-.flex-container.align-content-space-around {
-  align-content: space-around;
+.ac-space-evenly {
+  align-content: space-evenly !important;
 }
 
-.flex-container.align-content-stretch {
-  align-content: stretch;
+.ac-stretch {
+  align-content: stretch !important;
 }
 
-.flex-item {
-  flex: 1;
+.ai-baseline {
+  align-items: baseline !important;
 }
 
-.flex-item.order-1 {
-  order: 1;
+.ai-initial {
+  align-items: initial !important;
 }
 
-.flex-item.order-2 {
-  order: 2;
+.ai-inherit {
+  align-items: inherit !important;
 }
 
-.flex-item.order-3 {
-  order: 3;
+.ai-flex-start {
+  align-items: flex-start !important;
 }
 
-.flex-item.order-4 {
-  order: 4;
+.ai-flex-end {
+  align-items: flex-end !important;
 }
 
-.flex-item.order-5 {
-  order: 5;
+.ai-center {
+  align-items: center !important;
 }
 
-.flex-item.order-6 {
-  order: 6;
+.ai-stretch {
+  align-items: stretch !important;
 }
 
-.flex-item.order-7 {
-  order: 7;
+.text-left {
+  text-align: left;
 }
 
-.flex-item.order-8 {
-  order: 8;
+.text-center {
+  text-align: center;
 }
 
-.flex-item.order-9 {
-  order: 9;
+.text-right {
+  text-align: right;
 }
 
-.flex-item.order-10 {
-  order: 10;
-}
-
-.flex-item.align-self-start {
-  align-self: flex-start;
-}
-
-.flex-item.align-self-end {
-  align-self: flex-end;
-}
-
-.flex-item.align-self-center {
-  align-self: center;
-}
-
-.flex-item.align-self-baseline {
-  align-self: baseline;
-}
-
-.flex-item.align-self-stretch {
-  align-self: stretch;
+.text-justify {
+  text-align: justify;
 }
 
 /*# sourceMappingURL=global.css.map */
