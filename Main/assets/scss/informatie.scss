@@ -13,15 +13,6 @@
     display: flex;
     flex-direction: column;
   
-    header {
-      padding: 0;
-    }
-  
-    footer {
-      background: darkgoldenrod;
-      padding: 1em 0;
-    }
-  
     main {
       position: relative;
       padding-top: 0;
@@ -32,7 +23,7 @@
   .bg-image {
     position: relative;
     background-color: #f6f6f6;
-    background-image: url(../fotos/p4picture2.jpg);
+    background-image: url(../../img/p4picture2.jpg);
     background-repeat: no-repeat;
     background-size: 1400px 740px;
     color: white;
