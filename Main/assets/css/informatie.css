@@ -17,14 +17,19 @@ body{
   display:flex;
   flex-direction: column;
 }
-body header {
-  padding: 0;
-}
-body footer {
-  background: darkgoldenrod;
-  padding: 1em 0;
-}
-body main {
+
+header{
+  
+      padding: 0em 0 0em 0;
+  }  
+  
+footer{
+      background: darkgoldenrod;
+      padding:1em 0 1em 0;
+  }
+
+/* Set the position of the main element to relative */
+main {
   position: relative;
   padding-top: 0px; /* Add some padding to separate content from the header */
   padding-bottom: 3rem;
@@ -35,9 +40,9 @@ body main {
   
   position:relative;
   background-color: #f6f6f6;
-  background-image: url(../../img/p4picture2.jpg);
+  background-image: url(../fotos/p4picture2.jpg);
   background-repeat: no-repeat;
-  background-size: 1400px 740px;
+  background-size: 1400 740;
   
   
   color: white;
