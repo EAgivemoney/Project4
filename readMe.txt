@@ -1,1 +1,1 @@
-Sprint review 2 = 31 Mei. Hou daar rekening mee
+Sprint review 2 = 30 Mei. Hou daar rekening mee
