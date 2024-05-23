@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 95vh;
+  background: rgb(255, 255, 255);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+}
+body main {
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 3rem;
+}
+
+.bg-image {
+  position: relative;
+  background-color: #f6f6f6;
+  background-image: url(../../img/p4picture2.jpg);
+  background-repeat: no-repeat;
+  background-size: 1400px 740px;
+  color: white;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1em 0;
+  flex: 1 1 100px;
+  background-color: #20813a;
+}
+
+.containerB {
+  max-width: 100%;
+  margin: auto;
+  padding-left: 0;
+  padding-right: 0;
+  background-color: #1daeec;
+}
+
+.containerLB {
+  max-width: 100%;
+  margin: auto;
+  padding-left: 25rem;
+  padding-right: 20rem;
+  background-color: #a3e2fc;
+}
+
+.info-1, .info-2, .info-3, .info-4 {
+  width: 75%;
+  height: auto;
+  margin-top: 30px;
+  border-bottom: 0.5px solid silver;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.item-1, .item-2 {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.item-2 {
+  width: 90%;
+}
+
+.wrapper-PI {
+  width: 105px;
+  margin: 0 auto;
+  color: rgb(255, 255, 255);
+}
+
+.label {
+  align-content: left;
+  text-overflow: ellipsis;
+}
+
+.containerM {
+  max-width: 1400px;
+  margin-top: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.box-2 {
+  width: 30%;
+  height: 600px;
+  margin-top: 30px;
+  margin: auto;
+  border: 10px;
+}
+
+.Bitem-1, .Bitem-2, .Bitem-3 {
+  width: 520px;
+  height: 600px;
+  padding: 10px;
+  text-align: center;
+  border: 10px;
+  border-radius: 10px;
+  margin-top: 10rem;
+  margin: auto;
+}
+
+.colerblue {
+  max-width: 100%;
+  background-color: #a3e2fc;
+  padding-bottom: 3rem;
+}
+
+.video {
+  width: 750px;
+  height: 400px;
+  margin-top: 1000px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(120, 116, 116);
+}
+
+/*# sourceMappingURL=informatie.css.map */
