@@ -5,11 +5,20 @@ body{
     background-color: wheat;
     .game{
         .game-window{
+                .saveData{
+                    position: absolute;
+                    background-color: white;
+                    padding: 3%;
+                    top: 40vh;
+                    left: 40%;
+                    border-radius: 5px;
+                }
            .stock-market{
             display: flex;
             background-color: white;
             flex-direction: row;
                 .stock{
+                    box-sizing: border-box;
                     display: flex;
                     padding: 0;
                     text-align: center;
@@ -19,4 +28,12 @@ body{
             }
         }
     }
+}
+.blur {
+    filter: blur(4px); /* Wazig effect */
+    pointer-events: none; /* Voorkom dat er interactie is met de wazige elementen */
+}
+
+.hidden{
+    display:none;
 }

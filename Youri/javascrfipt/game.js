@@ -147,3 +147,19 @@ async function slowTimer() {
     clearInterval(updateInterval); // Stop deze interval na 5000 ms
     startTimer(50); // Start een nieuwe interval met een frequentie van 50 ms
 }
+
+//deze knop wordt gebruikt voor het togglen van het opslaan formulier
+document.getElementById("opslaan").addEventListener("click", function() {
+    const saveForm = document.getElementById("saveForm");
+    saveForm.classList.toggle("hidden");
+
+    const balenciagaValue = document.querySelector(".Balenciaga").textContent;
+    document.getElementById("scoreValue").value = balenciagaValue;
+
+    var buttons = document.querySelectorAll('.verdwijn');
+    buttons.forEach(function(button) {
+        button.classList.add('hidden');
+    });
+    
+    document.querySelector('.stock-market').classList.toggle('blur');
+});

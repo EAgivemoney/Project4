@@ -316,17 +316,35 @@
 body {
   background-color: wheat;
 }
+body .game .game-window .saveData {
+  position: absolute;
+  background-color: white;
+  padding: 3%;
+  top: 40vh;
+  left: 40%;
+  border-radius: 5px;
+}
 body .game .game-window .stock-market {
   display: flex;
   background-color: white;
   flex-direction: row;
 }
 body .game .game-window .stock-market .stock {
+  box-sizing: border-box;
   display: flex;
   padding: 0;
   text-align: center;
   border: 0.1rem solid black;
   justify-content: center;
+}
+
+.blur {
+  filter: blur(4px); /* Wazig effect */
+  pointer-events: none; /* Voorkom dat er interactie is met de wazige elementen */
+}
+
+.hidden {
+  display: none;
 }
 
 /*# sourceMappingURL=gameStyle.css.map */
