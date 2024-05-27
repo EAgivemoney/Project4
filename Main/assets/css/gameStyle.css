@@ -313,20 +313,66 @@
     width: 100%;
   }
 }
-body {
+body .Youri {
   background-color: wheat;
 }
-body .game .game-window .stock-market {
-  display: flex;
+body .Youri .game .game-window .saveData {
+  position: absolute;
   background-color: white;
-  flex-direction: row;
+  padding: 3%;
+  top: 40vh;
+  left: 40%;
+  border-radius: 5px;
 }
-body .game .game-window .stock-market .stock {
+body .Youri .game .game-window .stock-market {
+  display: flex;
+  flex-direction: row;
+  height: 78vh;
+}
+body .Youri .game .game-window .stock-market .stock {
+  box-sizing: border-box;
   display: flex;
   padding: 0;
   text-align: center;
   border: 0.1rem solid black;
   justify-content: center;
+  justify-content: space-between;
+  height: 100%;
+  background-color: white;
+}
+body .Youri .game .game-window .stock-market .highscore {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+body .Youri .game .game-window .stock-market .highscore .score-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+body .Youri .game .game-window .stock-market .highscore .score-table td {
+  position: relative;
+}
+body .Youri .game .game-window .stock-market .highscore .score-table tr:not(:last-child) {
+  border-bottom: 1px solid black;
+}
+body .Youri .game .game-window .stock-market .highscore .score-table td:first-child {
+  border-right: 1px solid black;
+}
+body .Youri .game .game-window .stock-market .highscore .buttons {
+  height: 25%;
+}
+body .Youri .game .game-window .stock-market .highscore .buttons .button {
+  height: 25%;
+  width: 100%;
+}
+
+.blur {
+  filter: blur(4px); /* Wazig effect */
+  pointer-events: none; /* Voorkom dat er interactie is met de wazige elementen */
+}
+
+.hidden {
+  display: none;
 }
 
 /*# sourceMappingURL=gameStyle.css.map */

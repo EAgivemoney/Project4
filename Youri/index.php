@@ -43,6 +43,7 @@
     <title>Game</title>
 </head>
 <body>
+    <main class="Youri">
     <div class="game">
         <div class="game-window">
             <h3>Balenciaga: <span class="Balenciaga">500.00</span></h3>
@@ -176,7 +177,7 @@
 ?>
         </div>
     </div>
-
+</main>
     <script src="javascrfipt/game.js"></script>
 </body>
 </html>
