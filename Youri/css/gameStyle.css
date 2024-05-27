@@ -328,6 +328,7 @@ body .game .game-window .stock-market {
   display: flex;
   background-color: white;
   flex-direction: row;
+  height: 78vh;
 }
 body .game .game-window .stock-market .stock {
   box-sizing: border-box;
@@ -336,6 +337,35 @@ body .game .game-window .stock-market .stock {
   text-align: center;
   border: 0.1rem solid black;
   justify-content: center;
+  justify-content: space-between;
+  height: 100%;
+  background-color: white;
+}
+body .game .game-window .stock-market .highscore {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+body .game .game-window .stock-market .highscore .score-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+body .game .game-window .stock-market .highscore .score-table td {
+  padding: 1%;
+  position: relative;
+}
+body .game .game-window .stock-market .highscore .score-table tr:not(:last-child) {
+  border-bottom: 1px solid black;
+}
+body .game .game-window .stock-market .highscore .score-table td:first-child {
+  border-right: 1px solid black;
+}
+body .game .game-window .stock-market .highscore .button {
+  height: 25%;
+}
+body .game .game-window .stock-market .highscore .button button {
+  height: 25%;
+  width: 100%;
 }
 
 .blur {

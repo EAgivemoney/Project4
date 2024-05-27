@@ -13,17 +13,31 @@ const aandelen = [
     },
     {
         naam: "Nintendo",
-        waarde: 80, // Andere waarde voor Nintendo
+        waarde: 80, 
         minSchommeling: 0.999999243,
         maxSchommeling: 1.0007951,
         minimumWaarde: 50
     },
     {
     naam: "Youtube",
-        waarde: 120, // Andere waarde voor Nintendo
+        waarde: 120, 
         minSchommeling: 0.999999295,
         maxSchommeling: 1.0006521,
         minimumWaarde: 75
+    },
+    {
+        naam: "Dogecoin",
+        waarde: 60,
+        minSchommeling:0.75,
+        maxSchommeling:1.3,
+        minimumWaarde:20
+    },
+    {
+        naam: "Ubisoft",
+        waarde: 200,
+        minSchommeling: 0.7,
+        maxSchommeling:1.35,
+        minimumWaarde:100
     }
 ];
 
@@ -63,8 +77,8 @@ function updateStocks() {
         if(parseFloat(waardeSpans[index].textContent) < aandeel.minimumWaarde) {
             Schommeling = 3;
         }
-        if (Math.random() < 0.05) { // 50% kans op een daling
-            // Verminder de waarde van het geselecteerde aandeel met 25%
+        if (Math.random() < 0.05) { // 5% kans op een daling
+            // Verminder de waarde van het geselecteerde aandeel met 75%
             randomMarktschatting = 25;
         }
         
