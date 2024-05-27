@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 *{
+
     margin: 0;
     padding: 0;
  }
@@ -34,17 +35,11 @@ h6{
   font-family:'Franklin Gothic Medium';
   font-size: 2rem;
 }
- 
-header{
-    
-        padding: 0em 0 0em 0;
-        background: darkgoldenrod;
-    }  
-    
-footer{
-        background: darkgoldenrod;
-        padding:1em 0 1em 0;
-    }
+
+h6{
+    color: rgb(29, 174, 236);
+    font-size: 1.3rem;
+}
 
 /* Set the position of the main element to relative */
 main {
@@ -63,14 +58,84 @@ font-style: normal;
 text-align: left;
 }
 
-.container{
-    background-color: #ffffff;
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../fotos/p4picture5.jpg");
+    height: 1100px;
+    width: 1800px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+  }
+  
+  .hero-text {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+  
+  .hero-text button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 10px 25px;
+    color: black;
+    background-color: #ddd;
+    text-align: center;
+    cursor: pointer;
+    border: 5px solid;
+  }
+  
+  .hero-text button:hover {
+    background-color: #555;
+    color: white;
+  }
+
+
+  .containerM{
+   
+    max-width: 1400px;
+    margin-top: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 0;
+  
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.containerG {
+    margin: 1rem;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1200px; /* Adjust as needed */
+    background-color: white;
 }
 
 .box {
-    width: 300px;
-    height: 200px;
-    padding: 32px 32px 100px 32px;
-    border: 5 solid;
-    margin: 0;
+    width: 710px;
+    height: 865px;
+    padding: 64px;
+    border: 5px solid;
+    box-sizing: border-box;
+   
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    text-align: left;
 }
+.color {
+color:white;
+}
+

@@ -10,14 +10,14 @@ body {
 
 .register-container {
   background-color: #fff;
-  padding: 20px;
+  padding: 35px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   width: 300px;
   text-align: center;
 }
 .register-container h2 {
-  margin-bottom: 20px;
+  margin-bottom: 35px;
 }
 .register-container input[type=text],
 .register-container input[type=email],
