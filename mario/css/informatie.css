@@ -10,12 +10,24 @@
 body{
     height: 95vh;
     background:rgb(255, 255, 255);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Arial Narrow', Arial;
     text-align: center;
     color: rgb(0, 0, 0);
-    font-size: 24px;
+    font-size: 1.5rem;
     display:flex;
     flex-direction: column;
+}
+h1{
+  font-family: sans-serif;
+  font-size: 3rem;
+}
+h2,
+h3,
+h4,
+h5,
+h6{
+  font-family:'Franklin Gothic Medium';
+  font-size: 2rem;
 }
  
 header{
@@ -42,7 +54,7 @@ main {
     background-color: #f6f6f6;
     background-image: url(../fotos/p4picture2.jpg);
     background-repeat: no-repeat;
-    background-size: 1400 740;
+    background-size: cover;
     
     
     color: white;
@@ -51,6 +63,25 @@ main {
     padding-bottom: 200px;
    
   }
+  
+  .FotoBoxL {
+    float:left;
+    object-fit: cover;
+  
+  }
+  .FotoBoxR {
+    float:right;
+    object-fit: cover;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 28px;
+    color: #000;
+    font-family: Fira Sans, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    }
   
 /* begin van boxes and content classes en eind van header, footer, background images en banners */
 
@@ -64,7 +95,19 @@ main {
     padding:1em 0 1em 0;
     flex: 1 1 100px;
 
-    background-color: #20813a;
+   
+  }
+  
+  .content2{
+    display: grid;
+    /*grid-template-columns: 33.3% 33.3% 33.3%;*/
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 960px;
+    margin: 0 auto;
+    padding:1em 0 1em 0;
+    flex: 1 1 100px;
+  
+   
   }
 
 /* Styling for the container */
@@ -83,6 +126,13 @@ main {
     padding-right: 20rem; /* Remove right padding */
     background-color: #a3e2fc;
 }
+
+.containerIF {
+  width: 80%;
+  height:auto;
+
+}
+
 
 .info-1 {
     width: 75%; /* Set the width of the box */
@@ -158,16 +208,6 @@ main {
     text-overflow: ellipsis;
 }
 
-.containerM{
-   
-    max-width: 1400px;
-    margin-top: auto;
-    margin-right: auto;
-    padding-left: 1rem;
-    padding-right: 0;
-  
-  }
-
   .box-2{
     width: 30%;
     height: 600px;
@@ -208,7 +248,7 @@ main {
 
 .video {
     
-       width: 750px;; /* Set the width of the box */
+    width: 750px;; /* Set the width of the box */
     height: 400px; /* Change height to auto to accommodate content */
     margin-top: 1000px; /* Add top margin */
     margin: auto; /* Center the box horizontally */

@@ -1,0 +1,88 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  padding: 50px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.sd-item {
+  margin-bottom: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: box-shadow 0.3s ease;
+}
+.sd-item:hover {
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+.sd-item h4 {
+  margin: 0;
+  font-size: 1.5em;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.sd-item .sd-content {
+  display: none;
+  margin-top: 20px;
+}
+.sd-item .sd-content p {
+  font-size: 1.1em;
+  color: #666;
+}
+.sd-item.active .sd-content {
+  display: block;
+}
+
+.small {
+  font-size: 0.8em;
+  color: #999;
+}
+
+.class-list {
+  list-style-type: none;
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .col-lg-3 {
+    flex: 0 0 calc(33.333% - 30px);
+    max-width: calc(33.333% - 30px);
+  }
+}
+@media screen and (max-width: 991px) {
+  .col-md-6 {
+    flex: 0 0 calc(50% - 30px);
+    max-width: calc(50% - 30px);
+  }
+}
+@media screen and (max-width: 575px) {
+  .col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/*# sourceMappingURL=faq.css.map */

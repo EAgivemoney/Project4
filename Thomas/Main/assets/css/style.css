@@ -1,0 +1,62 @@
+div .banner-img {
+  position: absolute;
+  inset: 1;
+  height: auto;
+  width: 100vw;
+  object-fit: cover;
+  z-index: -1;
+}
+div .left {
+  width: fit-content;
+  font-size: 2.5rem;
+}
+div .left h2 {
+  background-color: #000000;
+  color: white;
+}
+div .left h2 a {
+  font-size: 1.5rem;
+}
+div .left h2 a button {
+  border-radius: 50%;
+}
+div .left h2 a button i {
+  font-size: 2.5rem;
+}
+div .left h2 a button i:hover {
+  color: green;
+}
+div .right {
+  padding: 0.5rem;
+  position: absolute;
+  left: 75%;
+  bottom: 60%;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+div .right i {
+  margin-left: 0.5rem;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.centered-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/*# sourceMappingURL=style.css.map */
