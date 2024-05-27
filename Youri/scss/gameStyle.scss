@@ -2,6 +2,7 @@
 @use "conf";
 
 body{
+    .Youri{
     background-color: wheat;
     .game{
         .game-window{
@@ -57,6 +58,7 @@ body{
             }
         }
     }
+}
 }
 .blur {
     filter: blur(4px); /* Wazig effect */

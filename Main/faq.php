@@ -4,45 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ pagina</title>
-    <link rel="stylesheet" href="./assets/css/faq.css">
-    <link rel="stylesheet" href="./assets/css/glocal.css">
-    <link rel="stylesheet" href="./assets/css/header_and_footer.css">
+    <link rel="stylesheet" href="assets/css/faq.css">
+    <link rel="stylesheet" href="assets/css/glocal.css">
+    <link rel="stylesheet" href="assets/css/header_and_footer.css">
     <script src="https://kit.fontawesome.com/e6d1ddc709.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-        <header class="col-12 ai-center ">
-            <div class="col-10 ">
-    
-    
-                <div class="nav-top col-12  jc-space-evenly">
-                    <img src="https://www.mboutrecht.nl/wp-content/themes/mboutrecht/img/output/logo-new@2x.png"
-                        class="logo" alt="Logo MBO Utrecht">
-    
-                    <ul class="nav-options ">
-                        <li><a href="">Studiekeuze-events</a></li>
-                        <li><a href="">Werken bij</a></li>
-                        <li><a href="">Over MBO Utrecht</a></li>
-                        <li><a href="">Contact</a></li>
-    
-                        <input type="text" placeholder="Zoeken...   ">
-                        <strong><i class="fas fa-magnifying-glass"></i></strong>
-    
-    
-                    </ul>
-                </div>
-                <div class="nav-bottom col-10">
-                    <ul class="jc-space-evenly">
-                        <li><a href="index.html">Homepage</a></li>
-                        <li><a href="informatie.html">Informatie over opleiding</a></li>
-                        <li class="active"><a href="faq.html">FAQ</a></li>
-                        <li><a href="game/index.php">Game</a></li>
-                    </ul>
-                </div>
-            </div>
-        </header>
+        <?php include("assets/includes/header.php"); ?>
         <hr>
         <section id="faq">
             <div class="container">
@@ -89,52 +60,8 @@
                 </div>
             </div> 
         </section>
-        <footer>
-            <div class="container">
-                <div class="col-3">
-                    <h4>Informatie voor</h4>
-                    <ul>
-                        <li><a href="">Ouders</a></li>
-                        <li><a href="">Studenten</a></li>
-                        <li><a href="">Bedrijven</a></li>
-                        <li><a href="">Decanen</a></li>
-                    </ul>
-                </div>
-                <div class="col-3">
-                    <h4>MBO Utrecht</h4>
-                    <ul>
-                        <li><a href="">Over ons</a></li>
-                        <li><a href="">Nieuws</a></li>
-                        <li><a href="">Vacatures</a></li>
-                        <li><a href="">About MBO Utrecht</a></li>
-                    </ul>
-                </div>
-                <div class="col-3">
-                    <h4>Praktisch</h4>
-                    <ul>
-                        <li><a href="">Ziekmelden</a></li>
-                        <li><a href="">Schoolvakanties</a></li>
-                        <li><a href="">Veelgestelde vragen</a></li>
-                        <li><a href="">Click, onze studiekeuzetool</a></li>
-                    </ul>
-                </div>
-                <div class="col-3">
-                    <h4>Contactgegevens</h4>
-                    <ul>
-                        <li><a href="">030 - 28 15 100</a></li>
-                        <li><a href="">06 - 257 050 51 (Whatsapp)</a></li>
-                        <li><a href="">info@mboutrecht.nl</a></li>
-                        <li><a href="">volg ons:
-                                <i class="fa fa-twitter"></i>
-                                <i class="fa fa-facebook"></i>
-                                <i class="fa fa-linkedin"></i>
-                                <i class="fa fa-instagram"></i>
-                                <i class="fa fa-youtube"></i>
-                            </a></li>
-                    </ul>
-                </div>
-            </div>
-        </footer>
+        <?php include("assets/includes/footer.php"); ?>
+
     <script src="assets/scripts/javascript/faq.js"></script>
 </body>
 </html> 

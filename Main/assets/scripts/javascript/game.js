@@ -7,23 +7,37 @@ const aandelen = [
     {
         naam: "Apple",
         waarde: 100,
-        minSchommeling: 0.98,
-        maxSchommeling: 1.03,
+        minSchommeling: 0.999679999,
+        maxSchommeling: 1.00006561,
         minimumWaarde: 70
     },
     {
         naam: "Nintendo",
-        waarde: 80, // Andere waarde voor Nintendo
-        minSchommeling: 0.991423243,
-        maxSchommeling: 1.01956890,
+        waarde: 80, 
+        minSchommeling: 0.999999243,
+        maxSchommeling: 1.0007951,
         minimumWaarde: 50
     },
     {
     naam: "Youtube",
-        waarde: 80, // Andere waarde voor Nintendo
-        minSchommeling: 0.991423243,
-        maxSchommeling: 1.01956890,
-        minimumWaarde: 50
+        waarde: 120, 
+        minSchommeling: 0.999999295,
+        maxSchommeling: 1.0006521,
+        minimumWaarde: 75
+    },
+    {
+        naam: "Dogecoin",
+        waarde: 60,
+        minSchommeling:0.75,
+        maxSchommeling:1.3,
+        minimumWaarde:20
+    },
+    {
+        naam: "Ubisoft",
+        waarde: 200,
+        minSchommeling: 0.7,
+        maxSchommeling:1.35,
+        minimumWaarde:100
     }
 ];
 
@@ -63,8 +77,8 @@ function updateStocks() {
         if(parseFloat(waardeSpans[index].textContent) < aandeel.minimumWaarde) {
             Schommeling = 3;
         }
-        if (Math.random() < 0.05) { // 50% kans op een daling
-            // Verminder de waarde van het geselecteerde aandeel met 25%
+        if (Math.random() < 0.05) { // 5% kans op een daling
+            // Verminder de waarde van het geselecteerde aandeel met 75%
             randomMarktschatting = 25;
         }
         
@@ -82,14 +96,14 @@ function updateStocks() {
     });
 };
 
-// Event listener voor de "kopen" knoppen
+// Event listener voor de "kopen" knop
 kopenKnoppen.forEach(function(knop, index) {
     knop.addEventListener("click", function() {
         koopAandeel(index);
     });
 });
 
-// Event listener voor de "verkopen" knoppen
+// Event listener voor de "verkopen" knop
 verkopenKnoppen.forEach(function(knop, index) {
     knop.addEventListener("click", function() {
         verkoopAandeel(index);
@@ -126,28 +140,44 @@ function verkoopAandeel(index) {
 
 // Functie om de timer te starten
 function startTimer() {
-    updateInterval = setInterval(updateStocks, 50); // 5000 ms (5 seconden)
+    clearInterval(updateInterval); // Stop eerst de huidige interval, als die er is
+    updateInterval = setInterval(updateStocks, 50); // Start een nieuwe interval. Moet nog een goed getal bedenken voor de snelheid.
 }
 
 // Functie om de timer te stoppen
 function stopTimer() {
-    clearInterval(updateInterval);
+    clearInterval(updateInterval); // Stop de timer als deze actief is
+    updateInterval = null; // Zet updateInterval op null om aan te geven dat er geen interval actief is
 }
 
 // Functie om de timer voor 10 seconden te bevriezen
 async function slowTimer() {
     clearInterval(updateInterval); // Stop eerst de huidige interval, als die er is
-
-    updateInterval = setInterval(updateStocks, 500);
+    updateInterval = setInterval(updateStocks, 500); // Start een nieuwe interval met een frequentie van 500 ms
 
     // Wacht 5000 ms
     await new Promise(resolve => setTimeout(resolve, 5000));
 
     clearInterval(updateInterval); // Stop deze interval na 5000 ms
-    // Start een nieuwe interval met een kortere frequentie (50 ms)
-    updateInterval = setInterval(updateStocks, 50);
+    startTimer(50); // Start een nieuwe interval met een frequentie van 50 ms
 }
 
+//deze knop wordt gebruikt voor het togglen van het opslaan formulier
+document.getElementById("opslaan").addEventListener("click", function() {
+    
+    clearInterval(updateInterval); // Stop de timer als deze actief is
+    updateInterval = null;
+    
+    const saveForm = document.getElementById("saveForm");
+    saveForm.classList.toggle("hidden");
 
+    const balenciagaValue = document.querySelector(".Balenciaga").textContent;
+    document.getElementById("scoreValue").value = balenciagaValue;
 
-
+    var buttons = document.querySelectorAll('.verdwijn');
+    buttons.forEach(function(button) {
+        button.classList.add('hidden');
+    });
+    
+    document.querySelector('.stock-market').classList.toggle('blur');
+});

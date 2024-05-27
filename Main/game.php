@@ -1,5 +1,5 @@
 <?php
-    include('config/config.php');
+    include('assets/config/config.php');
 
 
     $dsn = "mysql:host=$dbHost;
@@ -39,10 +39,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/gameStyle.css">
+    <link rel="stylesheet" href="assets/css/gameStyle.css">
+    <link rel="stylesheet" href="assets/css/glocal.css">
+    <link rel="stylesheet" href="assets/css/header_and_footer.css">
+    
     <title>Game</title>
 </head>
 <body>
+    <?php include("assets/includes/header.php"); ?>
+
+    <main class="Youri">
+
     <div class="game">
         <div class="game-window">
             <h3>Balenciaga: <span class="Balenciaga">500.00</span></h3>
@@ -52,7 +59,7 @@
                     <h4>Apple</h4>
                     <h5>Waarde: <span class="waarde"></span></h5>
                     <h5>Jouw aandelen:  <span class="aandelen">0</span></h5>
-                    <img src="img/Apple.png" alt="Het logo van Apple">
+                    <img src="assets/img/Apple.png" alt="Het logo van Apple">
                     <h5>Stabiliteit: <span class="stabiliteit">hoog</span></h5>
                     
                         <button class="kopen"><h5>kopen</h5></button>
@@ -63,7 +70,7 @@
                     <h4>Nintendo</h4>
                     <h5>Waarde: <span class="waarde"></span></h5>
                     <h5>Jouw aandelen:  <span class="aandelen">0</span></h5>
-                    <img src="img/nintendo.png" alt="Het logo van Nintendo">
+                    <img src="assets/img/nintendo.png" alt="Het logo van Nintendo">
                     <h5>Stabiliteit: <span class="stabiliteit">hoog</span></h5>
                     <button class="kopen"><h5>kopen</h5></button>
                     <button class="verkopen"><h5>verkopen</h5></button>
@@ -73,7 +80,7 @@
                     <h4>Youtube</h4>
                     <h5>Waarde: <span class="waarde"></span></h5>
                     <h5>Jouw aandelen:  <span class="aandelen">0</span></h5>
-                    <img src="img/youtube.png" alt="Het logo van Youtube">
+                    <img src="assets/img/youtube.png" alt="Het logo van Youtube">
                     <h5>Stabiliteit: <span class="stabiliteit">hoog</span></h5>
                     <button class="kopen"><h5>kopen</h5></button>
                     <button class="verkopen"><h5>verkopen</h5></button>
@@ -83,7 +90,7 @@
                     <h4>Dogecoin</h4>
                     <h5>Waarde: <span class="waarde"></span></h5>
                     <h5>Jouw aandelen:  <span class="aandelen">0</span></h5>
-                    <img src="img/dogecoin.png" alt="het loge van dogecoin">
+                    <img src="assets/img/dogecoin.png" alt="het loge van dogecoin">
                     <h5>Stabiliteit: <span class="stabiliteit">laag</span></h5>
                     <button class="kopen"><h5>kopen</h5></button>
                     <button class="verkopen"><h5>verkopen</h5></button>
@@ -93,7 +100,7 @@
                     <h4>Unity</h4>
                     <h5>Waarde: <span class="waarde"></span></h5>
                     <h5>Jouw aandelen:  <span class="aandelen">0</span></h5>
-                    <img src="img/ubisoft.png" alt="het loge van dogecoin">
+                    <img src="assets/img/ubisoft.jpg" alt="het loge van dogecoin">
                     <h5>Stabiliteit: <span class="stabiliteit">laag</span></h5>
                     <button class="kopen"><h5>kopen</h5></button>
                     <button class="verkopen"><h5>verkopen</h5></button>
@@ -135,8 +142,9 @@
             <?php
     
     //dit script slaat de score op in een database en ververst de pagina zodat je het meteen kan zien
-    include('config/config.php');
+    include('assets/config/config.php');?>
 
+<?php
     
     $dsn = "mysql:host=$dbHost;
             dbname=$dbName;
@@ -176,7 +184,11 @@
 ?>
         </div>
     </div>
+        </main>
 
-    <script src="javascrfipt/game.js"></script>
+    <?php include("assets/includes/footer.php"); ?>
+
+
+    <script src="assets/scripts/javascript/game.js"></script>
 </body>
 </html>

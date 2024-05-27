@@ -8,38 +8,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
     <title>Homepage</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/global.css">
-    <link rel="stylesheet" href="./assets/css/header_and_footer.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/header_and_footer.css">
 </head>
 <body>
-    <header class="col-12 ai-center ">
-        <div class="col-10 ">
-            <div class="nav-top col-12  jc-space-evenly">
-                    <div class="logo" alt="Logo MBO Utrecht">
-
-                <ul class="nav-options ">
-                    <li><a href="">Studiekeuze-events</a></li>
-                    <li><a href="">Werken bij</a></li>
-                    <li><a href="">Over MBO Utrecht</a></li>
-                    <li><a href="">Contact</a></li>
-
-                    <input type="text" placeholder="Zoeken...   ">
-                    <strong><i class="fas fa-search"></i></strong>
-
-
-                </ul>
-            </div>
-            <div class="nav-bottom col-10">
-                <ul class="jc-space-evenly">
-                    <li class="active"><a href="index.html">Homepage</a></li>
-                    <li><a href="informatie.html">Informatie over opleiding</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="game/index.php">Game</a></li>
-                </ul>
-            </div>
-        </div>
-    </header>
+   <?php include("assets/includes/header.php") ?>
     <hr>
     <div>
         <img src="assets/img/mbouhomepage.jpg" alt="">
@@ -85,5 +59,7 @@
         <h3>Daytraden</h3>
         <p>Ontdek de opwinding van daytrading! Handel dagelijks in aandelen en valuta, en profiteer van kleine prijsbewegingen. Werk flexibel, waar en wanneer je wilt. Gebruik slimme strategieën en technische analyses om snel winst te maken zonder langetermijnrisico's. Begin vandaag nog en bereik je financiële doelen sneller!</p>
     </div>
+
+    <?php include("assets/includes/footer.php"); ?>
 </body>
 </html>
