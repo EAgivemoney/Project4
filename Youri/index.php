@@ -1,3 +1,39 @@
+<?php
+    include('config/config.php');
+
+
+    $dsn = "mysql:host=$dbHost;
+            dbname=$dbName;
+            charset=UTF8";
+                    
+                    
+        $pdo = new PDO($dsn, $dbUser, $dbPass);
+
+        $pdo = new PDO($dsn, $dbUser, $dbPass);
+
+        $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+
+        $sql = "SELECT name, score, date 
+        from highscore
+        Order BY score desc
+        LIMIT 10";
+        $statement = $pdo->prepare($sql);
+
+        $statement->execute();  
+                    
+        $result = $statement->fetchAll(PDO::FETCH_OBJ);
+
+        $scoreList = "";
+                    
+        foreach ($result as $persoonObject) {
+            $scoreList .= "<tr>
+                                <td>$persoonObject->name</td>
+                                Score: <td>$persoonObject->score</td>
+                            </tr><br>";
+    }
+                    
+                
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,8 +54,9 @@
                     <h5>Jouw aandelen:  <span class="aandelen">0</span></h5>
                     <img src="img/Apple.png" alt="Het logo van Apple">
                     <h5>Stabiliteit: <span class="stabiliteit">hoog</span></h5>
-                    <button class="kopen"><h5>kopen</h5></button>
-                    <button class="verkopen"><h5>verkopen</h5></button>
+                    
+                        <button class="kopen"><h5>kopen</h5></button>
+                        <button class="verkopen"><h5>verkopen</h5></button>
                 </div>
 
                 <div class=" stock Nintendo col-12 col-l-2 col-s-5">
@@ -42,13 +79,43 @@
                     <button class="verkopen"><h5>verkopen</h5></button>
                 </div>
 
+                <div class=" stock dogecoin col-12 col-l-2 col-s-5">
+                    <h4>Dogecoin</h4>
+                    <h5>Waarde: <span class="waarde"></span></h5>
+                    <h5>Jouw aandelen:  <span class="aandelen">0</span></h5>
+                    <img src="img/dogecoin.png" alt="het loge van dogecoin">
+                    <h5>Stabiliteit: <span class="stabiliteit">laag</span></h5>
+                    <button class="kopen"><h5>kopen</h5></button>
+                    <button class="verkopen"><h5>verkopen</h5></button>
+                </div>
+
+                <div class=" stock unity col-12 col-l-2 col-s-5">
+                    <h4>Unity</h4>
+                    <h5>Waarde: <span class="waarde"></span></h5>
+                    <h5>Jouw aandelen:  <span class="aandelen">0</span></h5>
+                    <img src="img/ubisoft.png" alt="het loge van dogecoin">
+                    <h5>Stabiliteit: <span class="stabiliteit">laag</span></h5>
+                    <button class="kopen"><h5>kopen</h5></button>
+                    <button class="verkopen"><h5>verkopen</h5></button>
+                </div>
+
+                <div class=" stock highscore col-12 col-l-2 col-s-5">
+                    <div class="score-table">
+                        <?php echo "<p>" .  $scoreList . "</p>"; ?>
+                    </div>
+                    
+                    <div class="button">
+                        <button id="startBtn" class="verdwijn">Start</button>
+                        <button id="stopBtn" class="verdwijn">Stop</button>
+                        <button id="slowBtn" class="verdwijn">vertraag</button>
+                        <button id="opslaan" class="verdwijn">end</button>
+                    </div>
+                </div>
+
                 
                 
             </div>
-            <button id="startBtn" class="verdwijn">Start</button>
-            <button id="stopBtn" class="verdwijn">Stop</button>
-            <button id="slowBtn" class="verdwijn">vertraag</button>
-            <button id="opslaan" class="verdwijn">end</button>
+            
 
             
             
@@ -59,7 +126,7 @@
             </form>
             <?php
     
-    
+    //dit script slaat de score op in een database en ververst de pagina zodat je het meteen kan zien
     include('config/config.php');
 
     
@@ -90,7 +157,7 @@
                     
                     echo "Score is opgeslagen";
 
-                    echo "<script>setTimeout(function() { window.location = window.location.href; }, 2000);</script>";
+                    echo "<script>setTimeout(function() { window.location = window.location.href; }, 1000);</script>";
 
         
                 } else {
