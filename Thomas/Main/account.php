@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+// Check if the user is logged in
+if (!isset($_SESSION['user_id']) || !isset($_SESSION['username']) || $_SESSION['status'] !== 'User') {
+    header("Location: login.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +22,23 @@
     <link rel="stylesheet" href="./assets/css/account.css">
 </head>
 <body>
-    <h1>Hello world</h1>
+    <div class="account-container">
+    <h1>Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h1>
+        <p>You have successfully logged in as a user.</p>
+        <div class="account-info">
+            <h2>Your Account Information</h2>
+            <p><strong>Username:</strong> <?php echo htmlspecialchars($_SESSION['username']); ?></p>
+        </div>
+        <div class="account-actions">
+            <h2>Actions</h2>
+            <ul>
+                <li><a href="update_profile.php">Update Profile</a></li>
+                <li><a href="change_password.php">Change Password</a></li>
+            </ul>
+        </div>
+        <form action="assets/scripts/php/logout.php" method="post">
+            <button type="submit">Logout</button>
+        </form>
+    </div>
 </body>
 </html>
