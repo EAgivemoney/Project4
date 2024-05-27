@@ -15,7 +15,6 @@ body{
                 }
            .stock-market{
             display: flex;
-            background-color: white;
             flex-direction: row;
             height: 78vh; // Zorg ervoor dat de ouderdiv de volledige hoogte van het scherm inneemt
 
@@ -38,7 +37,6 @@ body{
                         border-collapse: collapse;
                         width: 100%;
                         td{
-                            padding: 1%;
                             position: relative;
                         }
                         tr:not(:last-child){
@@ -48,9 +46,9 @@ body{
                             border-right: 1px solid black;
                         }
                     }
-                    .button{
+                    .buttons{
                         height: 25%;
-                        button{
+                        .button{
                             height: 25%;
                             width: 100%;
                         }
