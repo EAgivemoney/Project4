@@ -35,6 +35,7 @@ CREATE TABLE IF NOT EXISTS `login` (
   `Username` varchar(20) NOT NULL,
   `Email` varchar(100) NOT NULL,
   `Password` varchar(40) NOT NULL,
+  `Status` ENUM('User', 'Admin') NOT NULL DEFAULT 'User',
   PRIMARY KEY (`Id`),
   UNIQUE KEY (`Username`),
     UNIQUE KEY (`Email`)
