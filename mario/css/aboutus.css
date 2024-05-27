@@ -34,12 +34,6 @@ h6{
   font-family:'Franklin Gothic Medium';
   font-size: 2rem;
 }
- 
-header{
-    
-        padding: 0em 0 0em 0;
-        background: darkgoldenrod;
-    }  
     
 footer{
         background: darkgoldenrod;
@@ -62,15 +56,56 @@ font-weight: 400;
 font-style: normal;
 text-align: left;
 }
+.bg-image {
+    
 
-.container{
-    background-color: #ffffff;
+
+    position:relative;
+    background-image: url(../fotos/p4picture5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+    color: white;
+    padding: 20rem;
+    
+  }
+
+  .containerM{
+   
+    max-width: 1400px;
+    margin-top: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 0;
+  
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 960px; /* Adjust as needed */
 }
 
 .box {
-    width: 300px;
-    height: 200px;
+    width: 550px;
+    height: auto;
     padding: 32px 32px 100px 32px;
-    border: 5 solid;
-    margin: 0;
+    border: 5px;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
 }
+
