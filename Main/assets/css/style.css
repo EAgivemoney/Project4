@@ -1,6 +1,5 @@
 body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  background-color: rgb(73, 73, 216);
 }
 body div img {
   position: absolute;
@@ -165,5 +164,11 @@ body .daytraden-block {
   left: 19%;
   position: absolute;
 }
-
+.banner{
+  padding-top: 5rem;
+  width: 100%;
+}
+.banner-img{
+  width: 100%;
+}
 /*# sourceMappingURL=style.css.map */

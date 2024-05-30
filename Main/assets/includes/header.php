@@ -1,3 +1,12 @@
+    <script src="https://kit.fontawesome.com/e6d1ddc709.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+</body>
+</html>
 <header class="col-12 ai-center ">
             <div class="col-10 ">
     

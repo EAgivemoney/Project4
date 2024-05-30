@@ -1,19 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ pagina</title>
+<?php include_once("assets/includes/startVanPagina.php"); ?>
+    
     <link rel="stylesheet" href="assets/css/faq.css">
     <link rel="stylesheet" href="assets/css/glocal.css">
-    <link rel="stylesheet" href="assets/css/header_and_footer.css">
-    <script src="https://kit.fontawesome.com/e6d1ddc709.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
-</head>
-<body>
-        <?php include("assets/includes/header.php"); ?>
+    <link rel="stylesheet" href="assets/css/navbarEnFooter.css">
+    <Title>FAQ</Title>
+   <?php include("assets/includes/header.php"); ?>
         <hr>
         <section id="faq">
             <div class="container">
