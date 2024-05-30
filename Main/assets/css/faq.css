@@ -22,6 +22,30 @@ h1 {
   color: #333;
 }
 
+.sd-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.sd-item.active .sd-content {
+  max-height: 1000px;
+  opacity: 1;
+}
+
+.sd-item h4 {
+  margin: 0;
+  font-size: 1.5em;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.sd-item h4:hover {
+  color: #007bff;
+}
+
 .sd-item {
   margin-bottom: 30px;
   background-color: #fff;
@@ -30,9 +54,11 @@ h1 {
   padding: 20px;
   transition: box-shadow 0.3s ease;
 }
+
 .sd-item:hover {
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
 }
+
 .sd-item h4 {
   margin: 0;
   font-size: 1.5em;
@@ -40,14 +66,17 @@ h1 {
   cursor: pointer;
   transition: color 0.3s ease;
 }
+
 .sd-item .sd-content {
   display: none;
   margin-top: 20px;
 }
+
 .sd-item .sd-content p {
   font-size: 1.1em;
   color: #666;
 }
+
 .sd-item.active .sd-content {
   display: block;
 }

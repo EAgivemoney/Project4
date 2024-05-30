@@ -25,21 +25,21 @@ if (!isset($_SESSION['user_id']) || !isset($_SESSION['username']) || $_SESSION['
     <?php include("assets/includes/header.php") ?>
     <hr>
     <div class="account-container">
-        <h1>Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?></h1>
-        <p>You have succesfully logged in as a user.</p>
+        <h1>Welkom <?php echo htmlspecialchars($_SESSION['username']); ?></h1>
+        <p>U bent succesvol ingelogd als gebruiker.</p>
         <div class="account-info">
-            <h2>Your account Information</h2>
-            <p><strong>Username:</strong> <?php echo htmlspecialchars($_SESSION['username']); ?></p>
+            <h2>Uw accountgegevens</h2>
+            <p><strong>Gebruikersnaam:</strong> <?php echo htmlspecialchars($_SESSION['username']); ?></p>
         </div>
         <div class="account-actions">
-            <h2>Actions</h2>
+            <h2>Acties</h2>
             <ul>
-                <li><a href="#">Update Profile</a></li>
-                <li><a href="change_password.php">Change Password</a></li>
+                <li><a href="#">Profiel bijwerken</a></li>
+                <li><a href="change_password.php">Wachtwoord wijzigen</a></li>
             </ul>
         </div>
         <form action="assets/scripts/php/logout.php" method="post">
-            <button type="submit">Logout</button>
+            <button type="submit">Uitloggen</button>
         </form>
     </div>
     <?php include("assets/includes/footer.php") ?>
