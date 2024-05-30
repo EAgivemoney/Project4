@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 *{
-
     margin: 0;
     padding: 0;
  }
@@ -40,6 +39,8 @@ h6{
     color: rgb(29, 174, 236);
     font-size: 1.3rem;
 }
+    
+
 
 /* Set the position of the main element to relative */
 main {
@@ -61,11 +62,14 @@ text-align: left;
 .hero-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../fotos/p4picture5.jpg");
     height: 1100px;
-    width: 1800px;
+    width: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+
+    padding-top: 15rem;
+    padding-bottom: 15rem;
 
   }
   
@@ -96,25 +100,7 @@ text-align: left;
   }
 
 
-  .containerM{
-   
-    max-width: 1400px;
-    margin-top: auto;
-    margin-right: auto;
-    padding-left: 1rem;
-    padding-right: 0;
-  
-  }
-
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-
-.containerG {
+  .containerG {
     margin: 1rem;
     display: flex;
     justify-content: space-around;
@@ -135,7 +121,8 @@ text-align: left;
     font-size: 18px;
     text-align: left;
 }
+
 .color {
-color:white;
-}
+    color:white;
+    }
 
