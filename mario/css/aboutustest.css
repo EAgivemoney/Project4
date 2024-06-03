@@ -89,7 +89,7 @@ main {
 }
 
 .hero-text button:hover {
-    background-color: #555;
+    background-color: rgb(29, 174, 236);
     color: white;
 }
 
@@ -132,14 +132,14 @@ main {
     display: inline-block;
     padding: 10px 25px;
     color: black;
-    background-color: #ddd;
+    background-color: rgb(29, 174, 236);
     text-align: center;
     cursor: pointer;
-    border: 2px solid #ddd; /* Adjusted border to make it lighter */
+    border: 2px solid #000000; /* Adjusted border to make it lighter */
     transition: background-color 0.3s, color 0.3s; /* Smooth transition effect */
 }
 
 .button-container button:hover {
-    background-color: #555;
+    background-color: rgb(144, 174, 236);
     color: white;
 }
