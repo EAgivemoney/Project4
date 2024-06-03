@@ -37,7 +37,6 @@
   <?php include_once("assets/includes/startVanPagina.php"); ?>
 
     <link rel="stylesheet" href="assets/css/gameStyle.css">
-    <link rel="stylesheet" href="assets/css/global.css">
     <link rel="stylesheet" href="assets/css/navbarEnFooter.css">
 
 
@@ -125,7 +124,12 @@
                 
                 
             </div>
-            
+            </div>
+    </div>
+    <?php
+    
+    include('assets/config/config.php');?> 
+    </main>
 
             
             
@@ -134,13 +138,11 @@
                 <input type="hidden" name="score" id="scoreValue" value="">
                 <button type="submit" id="opslaanBtn">Opslaan</button>
             </form>
-            <?php
-    
-    //dit script slaat de score op in een database en ververst de pagina zodat je het meteen kan zien
-    include('assets/config/config.php');?>
+            
 
 <?php
-    
+    //dit script slaat de score op in een database en ververst de pagina zodat je het meteen kan zien
+
     $dsn = "mysql:host=$dbHost;
             dbname=$dbName;
             charset=UTF8";
@@ -177,13 +179,12 @@
                 }
             }
 ?>
-        </div>
-    </div>
-        </main>
+        
 
-    <?php include("assets/includes/footer.php"); ?>
 
 
     <script src="assets/scripts/javascript/game.js"></script>
+    <?php include("assets/includes/footer.php"); ?>
+
 </body>
 </html>

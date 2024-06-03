@@ -315,6 +315,7 @@
 }
 body .Youri {
   background-color: wheat;
+  margin-top: 7%;
 }
 body .Youri .game .game-window .saveData {
   position: absolute;
