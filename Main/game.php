@@ -34,19 +34,14 @@
                     
                 
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <?php include_once("assets/includes/startVanPagina.php"); ?>
+
     <link rel="stylesheet" href="assets/css/gameStyle.css">
-    <link rel="stylesheet" href="assets/css/glocal.css">
-    <link rel="stylesheet" href="assets/css/header_and_footer.css">
-    
-    <title>Game</title>
-</head>
-<body>
-    <?php include("assets/includes/header.php"); ?>
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/navbarEnFooter.css">
+
+
+   <?php include("assets/includes/header.php"); ?>
 
     <main class="Youri">
 

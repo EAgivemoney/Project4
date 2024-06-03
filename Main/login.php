@@ -21,11 +21,11 @@
             }
         ?>
         <form action="assets/scripts/php/login.php" method="post">
-            <input type="text" name="username" placeholder="Username" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <input type="submit" value="Login">
+            <input type="text" name="username" placeholder="Gebruikersnaam" required>
+            <input type="password" name="password" placeholder="Wachtwoord" required>
+            <input type="submit" value="Inloggen">
         </form>
-        <p>Nog geen account? <a href="register.php">Register here</a></p>
+        <p>Nog geen account? <a href="register.php">Registreer hier</a></p>
     </div>
 </body>
 </html>

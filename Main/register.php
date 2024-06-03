@@ -21,13 +21,13 @@
             }
         ?>
         <form action="assets/scripts/php/register.php" method="post">
-            <input type="text" name="username" placeholder="Username" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <input type="password" name="confirm_password" placeholder="Confirm Password" required>
-            <input type="submit" value="Register">
+            <input type="text" name="username" placeholder="Gebruikersnaam" required>
+            <input type="email" name="email" placeholder="E-mail" required>
+            <input type="password" name="password" placeholder="Wachtwoord" required>
+            <input type="password" name="confirm_password" placeholder="Wachtwoord bevestigen" required>
+            <input type="submit" value="Registreren">
         </form>
-        <p>Heb je al een account? <a href="login.php">Login hier</a></p>
+        <p>Heb je al een account? <a href="login.php">Hier inloggen</a></p>
     </div>
 </body>
 </html>

@@ -1,22 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/e6d1ddc709.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+  <?php include_once("assets/includes/startVanPagina.php"); ?>
+    
     <title>Homepage</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/global.css">
-    <link rel="stylesheet" href="assets/css/header_and_footer.css">
-</head>
-<body>
-   <?php include("assets/includes/header.php") ?>
-    <hr>
-    <div>
-        <img src="assets/img/mbouhomepage.jpg" alt="">
+    <link rel="stylesheet" href="assets/css/navbarEnFooter.css">
+
+
+   <?php include("assets/includes/header.php"); ?>
+    
+    <div class="banner">
+        <img class="banner-img" src="assets/img/mbouhomepage.jpg" alt="">
         <div class="left">
             <h2>Nog niet <br> aangemeld  voor <br>een opleiding? <br>
                 <button class="cssbuttons-io-button">

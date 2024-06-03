@@ -1,18 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<?php include_once("assets/includes/startVanPagina.php"); ?>
 
-  
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./assets/css/informatie.css">
-  <link rel="stylesheet" href="./assets/css/header_and_footer.css">
-  <title>Document</title>
+  <title>Info</title>
+  <link rel="stylesheet" href="assets/css/informatie.css">
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/navbarEnFooter.css">
 
-</head>
-<body>
 
-  <?php include("assets/includes/header.php") ?>
+   <?php include("assets/includes/header.php"); ?>
 <div>
 <div class="FotoBoxL">
   <img src="assets/img/p4picture2.jpg" alt="">

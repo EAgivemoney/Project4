@@ -36,14 +36,14 @@ $conn->close();
 <body>
     <?php include("assets/includes/header.php") ?>
     <div class="admin-panel">
-        <h1>Welcome, Admin <?php echo htmlspecialchars($_SESSION['username']); ?>!</h1>
-        <p>You have succesfully logged in as an admin.</p>
-        <h2>Users</h2>
+        <h1>Welkom, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h1>
+        <p>Je bent succesvol ingelogd als beheerder.</p>
+        <h2>Gebruikers</h2>
         <table>
             <thead>
                 <tr>
-                    <th>Username</th>
-                    <th>Email</th>
+                    <th>Gebruikersnaam</th>
+                    <th>E-mail</th>
                     <th>Status</th>
                 </tr>
             </thead>
@@ -58,7 +58,7 @@ $conn->close();
             </tbody>
         </table>
         <form action="assets/scripts/php/logout.php" method="post">
-            <button type="submit">Logout</button>
+            <button type="submit">Uitloggen</button>
         </form>
     </div>
     <?php include("assets/includes/footer.php") ?>
