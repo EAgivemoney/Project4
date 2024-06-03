@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="background-stripes"></div>
+    <div class="container">
+        <div class="contact-form">
+            <h1>CONTACT US</h1>
+            <form action="database/create.php" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                
+                <input type="submit" value="Send">
+            </form>
+            <a href="database/login.php" class="admin-link">ADMIN LOGIN</a>
+        </div>
+        <div class="contact-details">
+            <h2>CONTACT DETAILS</h2>
+            <div><p>339075@student.mboutrecht.nl</p></div>
+            <div><p>(06 123456789)</p></div>
+            <div><p class="bold">UTRECHT</p></div>
+            <div><p>Australiëlaan 25, 3526 AB Utrecht</p></div>
+            <div><p class="bold">OPSTUREN</p></div>
+            <div><p>Australiëlaan 25, 3526 AB Utrecht</p></div>
+        </div>
+    </div>
+</body>
+</html>
