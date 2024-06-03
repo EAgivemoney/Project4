@@ -3,11 +3,11 @@
     <title>Homepage</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/global.css">
-    <link rel="stylesheet" href="assets/css/navbarEnFooterMainPage.css">
+    <link rel="stylesheet" href="assets/css/navbarEnFooter.css">
 
 
    <?php include("assets/includes/header.php"); ?>
-    
+    <main>
     <div class="banner">
         <img class="banner-img" src="assets/img/mbouhomepage.jpg" alt="">
         <div class="left">
@@ -52,6 +52,7 @@
         <h3>Daytraden</h3>
         <p>Ontdek de opwinding van daytrading! Handel dagelijks in aandelen en valuta, en profiteer van kleine prijsbewegingen. Werk flexibel, waar en wanneer je wilt. Gebruik slimme strategieën en technische analyses om snel winst te maken zonder langetermijnrisico's. Begin vandaag nog en bereik je financiële doelen sneller!</p>
     </div>
+</main>
 
     <?php include("assets/includes/footer.php"); ?>
 </body>

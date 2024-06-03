@@ -37,6 +37,7 @@
   <?php include_once("assets/includes/startVanPagina.php"); ?>
 
     <link rel="stylesheet" href="assets/css/gameStyle.css">
+    <link rel="stylesheet" href="assets/css/global.css">
     <link rel="stylesheet" href="assets/css/navbarEnFooter.css">
 
 
@@ -126,10 +127,11 @@
             </div>
             </div>
     </div>
+    </main>
+
     <?php
     
     include('assets/config/config.php');?> 
-    </main>
 
             
             
@@ -182,9 +184,9 @@
         
 
 
+        <?php include("assets/includes/footer.php"); ?>
 
     <script src="assets/scripts/javascript/game.js"></script>
-    <?php include("assets/includes/footer.php"); ?>
 
 </body>
 </html>

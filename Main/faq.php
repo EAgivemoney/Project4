@@ -1,7 +1,7 @@
 <?php include_once("assets/includes/startVanPagina.php"); ?>
     
     <link rel="stylesheet" href="assets/css/faq.css">
-    <link rel="stylesheet" href="assets/css/glocal.css">
+    <link rel="stylesheet" href="assets/css/global.css">
     <link rel="stylesheet" href="assets/css/navbarEnFooter.css">
     <Title>FAQ</Title>
    <?php include("assets/includes/header.php"); ?>
@@ -50,7 +50,7 @@
                     </ul>
                 </div>
             </div>
-            <h1><a href="test.php">Test Hier</a></h1>
+            <h1>
  
         </section>
         <?php include("assets/includes/footer.php"); ?>
