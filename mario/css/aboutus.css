@@ -126,3 +126,63 @@ text-align: left;
     color:white;
     }
 
+    .contentorS1{
+      display: grid;
+      /*grid-template-columns: 33.3% 33.3% 33.3%;*/
+      grid-template-columns: 1fr 1fr 1fr;
+      max-width: 70%;
+      margin: 0 auto;
+      padding:1em 0 1em 0;
+      flex: 1 1 100px;
+      flex-direction: row;
+      
+     
+    }
+
+    .boxS1{
+      width: 25rem; /* Set the width of the box */
+      height: 20rem; /* Change height to auto to accommodate content */
+      margin-top: 30px; /* Add top margin */
+      
+     
+      margin: auto; /* Center the box horizontally */
+      display: flex;
+      flex-direction: row;
+      
+      justify-content: space-around; /* Space items evenly horizontally */
+    }
+    
+    .boxS2 {  
+      width: 25rem; /* Set the width of the box */
+      height: 20rem; /* Change height to auto to accommodate content */
+      margin-top: 30px; /* Add top margin */
+      
+      margin: auto; /* Center the box horizontally */
+      display: flex;
+      flex-direction: row;
+      
+      justify-content: space-around; /* Space items evenly horizontally */
+    }
+    
+    .boxS3 {  
+      width: 25rem; /* Set the width of the box */
+      height: 20rem; /* Change height to auto to accommodate content */
+      margin-top: 30px; /* Add top margin */
+      
+     
+      margin: auto; /* Center the box horizontally */
+      display: flex;
+      flex-direction: row;
+      
+      justify-content: space-around; /* Space items evenly horizontally */
+    }
+
+    .boxL{
+      width: 45rem; /* Set the width of the box */
+      height: 20rem; /* Change height to auto to accommodate content */
+      margin-top: 30px; /* Add top margin */
+      text-align:left;
+      margin: auto; /* Center the box horizontally */
+      
+      justify-content: space-around; /* Space items evenly horizontally */
+    }

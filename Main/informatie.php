@@ -1,6 +1,6 @@
 <?php include_once("assets/includes/startVanPagina.php"); ?>
 
-  <title>Info</title>
+  <title>informatie</title>
   <link rel="stylesheet" href="assets/css/informatie.css">
   <link rel="stylesheet" href="assets/css/global.css">
   <link rel="stylesheet" href="assets/css/navbarEnFooter.css">
@@ -175,5 +175,3 @@
  
 
   <?php include("assets/includes/footer.php") ?>
-</body>
-</html>
