@@ -1,36 +1,39 @@
-    <script src="https://kit.fontawesome.com/e6d1ddc709.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="../css/global.css">
+<link rel="stylesheet" href="../css/navbarEnFooter.css">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap" rel="stylesheet">
 </head>
 <body>
     
 </body>
 </html>
-<header class="col-12 ai-center ">
-            <div class="col-10 ">
-    
-    
-                <div class="nav-top col-12  jc-space-evenly">    
-                    <ul class="nav-options ">
-                        <li><a href="#">Over Ons</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Inschrijven</a></li>
-                        <li><a href="login.php">Inloggen</a></li>
-    
-                        <input type="text" placeholder="Zoeken...   ">
-                        <strong><i class="fas fa-magnifying-glass"></i></strong>
-    
-    
-                    </ul>
+<header>
+            <nav class="fixed">
+                <div class="menu-container">
+                    <div class="logo">
+                        <span>Focus</span>Fuse
+                        <p>AD(H)D</p>
+                    </div>
+                    <div class="main-menu row jc-space-between">
+                        <ul>
+                            <li><a href="index.php">Home</a></li>
+                            <li><a href="informatie.php">Info opleiding</a></li>
+                            <li><a href="faq.php">FAQ</a></li>
+                            <li><a href="game.php">Game</a></li>
+                            <li><a href="contact.php">Contact</a></li>
+                            <li><a href="aboutUs.php">About Us</a></li>
+                            <li><a href="faq.php">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="user-menu">
+                        <ul>
+                            <li><a href="ADHD_test/resultaten.php">AD(H)D Test</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="nav-bottom col-10">
-                    <ul class="jc-space-evenly">
-                        <li><a href="index.php">Homepage</a></li>
-                        <li><a href="informatie.php">Informatie over opleiding</a></li>
-                        <li><a href="faq.php">FAQ</a></li>
-                        <li><a href="game.php">Game</a></li>
-                    </ul>
-                </div>
-            </div>
-        </header>
+                <div id="progress-bar"></div>
+            </nav>
+</header>

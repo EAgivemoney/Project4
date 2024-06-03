@@ -449,4 +449,14 @@
   text-align: justify;
 }
 
+*{
+  max-width: 100vw;
+}
+body{
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+header{
+  width: 100vw;
+  overflow: hidden;
+}
 /*# sourceMappingURL=global.css.map */

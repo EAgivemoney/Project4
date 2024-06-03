@@ -1,6 +1,8 @@
+
+  
 <footer>
             <div class="container">
-                <div class="col-3">
+                <div class="col-3 kolom-div">
                     <h4>Informatie voor</h4>
                     <ul>
                         <li><a href="">Ouders</a></li>
@@ -9,7 +11,7 @@
                         <li><a href="">Decanen</a></li>
                     </ul>
                 </div>
-                <div class="col-3">
+                <div class="col-3 kolom-div">
                     <h4>MBO Utrecht</h4>
                     <ul>
                         <li><a href="">Over ons</a></li>
@@ -18,7 +20,7 @@
                         <li><a href="">About MBO Utrecht</a></li>
                     </ul>
                 </div>
-                <div class="col-3">
+                <div class="col-3 kolom-div">
                     <h4>Praktisch</h4>
                     <ul>
                         <li><a href="">Ziekmelden</a></li>
@@ -27,7 +29,7 @@
                         <li><a href="">Click, onze studiekeuzetool</a></li>
                     </ul>
                 </div>
-                <div class="col-3">
+                <div class="col-3 kolom-div">
                     <h4>Contactgegevens</h4>
                     <ul>
                         <li><a href="">030 - 28 15 100</a></li>
@@ -44,3 +46,4 @@
                 </div>
             </div>
         </footer>
+
