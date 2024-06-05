@@ -1,9 +1,9 @@
 
 body .Youri {
-  background-color: wheat;
   margin-top: 7%;
+  padding-bottom: 3%;
 }
-body .Youri .game .game-window .saveData {
+.saveData {
   position: absolute;
   background-color: white;
   padding: 3%;

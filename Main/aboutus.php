@@ -39,10 +39,8 @@
      </div>
         </section>
     </main>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    
     <?php include("assets/includes/footer.php") ?>
+
+    </body>
+</html>

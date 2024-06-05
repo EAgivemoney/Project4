@@ -8,6 +8,9 @@ body {
 main {
   padding: 50px 0;
 }
+section#faq{
+  margin-top: 5%;
+}
 
 .container {
   max-width: 1200px;

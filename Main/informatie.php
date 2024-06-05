@@ -7,7 +7,8 @@
 
 
    <?php include("assets/includes/header.php"); ?>
-<div>
+
+   <div>
 <div class="FotoBoxL">
   <img src="assets/img/p4picture2.jpg" alt="">
 </div>
@@ -16,8 +17,8 @@
 </div>
 </div>
 
-  <main>
-
+  
+<main>
     <div class="main">
     <!--begin van informatie bar -->
     <div class=" content containerB">

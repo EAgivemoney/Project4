@@ -18,6 +18,7 @@ body{
 /* Set the position of the main element to relative */
 main {
   position: relative;
+  margin-top: 6%;
   padding-top: 0px; /* Add some padding to separate content from the header */
   padding-bottom: 3rem;
 }

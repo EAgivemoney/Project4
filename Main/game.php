@@ -126,23 +126,25 @@
                 
             </div>
             </div>
-    </div>
-    </main>
-
-    <?php
-    
-    include('assets/config/config.php');?> 
-
-            
-            
             <form id="saveForm" class="hidden saveData" action="" method="post">
                 <input type="text" name="naam" id="name" placeholder="Voer je naam in" required>
                 <input type="hidden" name="score" id="scoreValue" value="">
                 <button type="submit" id="opslaanBtn">Opslaan</button>
             </form>
+    </div>
+   
+    </main>
+
+    
+
+            
+            
+            
             
 
 <?php
+    include('assets/config/config.php');
+
     //dit script slaat de score op in een database en ververst de pagina zodat je het meteen kan zien
 
     $dsn = "mysql:host=$dbHost;

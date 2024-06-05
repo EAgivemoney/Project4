@@ -23,14 +23,12 @@
                             <li><a href="informatie.php">Info opleiding</a></li>
                             <li><a href="faq.php">FAQ</a></li>
                             <li><a href="game.php">Game</a></li>
-                            <li><a href="contact.php">Contact</a></li>
-                            <li><a href="aboutUs.php">About Us</a></li>
-                            <li><a href="faq.php">FAQ</a></li>
+                            <li><a href="aboutus.php">About Us</a></li>
                         </ul>
                     </div>
                     <div class="user-menu">
                         <ul>
-                            <li><a href="ADHD_test/resultaten.php">AD(H)D Test</a></li>
+                            <li><a href="login.php">login</a></li>
                         </ul>
                     </div>
                 </div>

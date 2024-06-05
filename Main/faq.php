@@ -8,7 +8,7 @@
         <hr>
         <section id="faq">
             <div class="container">
-                <div class="row">
+                <div class="column">
                     <h1 class="h3 text-center">FAQ</h1>
                     <ul class="class-list">
                         <li class="sd-item js-sd-item">
