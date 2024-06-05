@@ -14,8 +14,8 @@
             <nav class="fixed">
                 <div class="menu-container">
                     <div class="logo">
-                        <span>Focus</span>Fuse
-                        <p>AD(H)D</p>
+                        <span>MBO</span>Utrecht
+                        <p>Hogeschool</p>
                     </div>
                     <div class="main-menu row jc-space-between">
                         <ul>

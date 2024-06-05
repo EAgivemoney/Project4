@@ -26,6 +26,7 @@
             <input type="submit" value="Inloggen">
         </form>
         <p>Nog geen account? <a href="register.php">Registreer hier</a></p>
+        <p>Klik <a href="index.php">Hier</a> om terug naar de homepage te gaan</p>
     </div>
 </body>
 </html>

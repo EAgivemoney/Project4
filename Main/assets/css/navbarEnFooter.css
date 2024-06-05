@@ -80,15 +80,19 @@ nav {
 }
 
 nav .logo {
-  padding: 0.75rem;
-  font-size: 1rem;
+  padding: 1.2rem 0 0 1.2rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  color: #00aaff;
+  color: #000000;
   font-style: normal;
 }
 
 nav .logo span {
   color: rgb(255, 255, 255);
+}
+
+nav .logo p {
+  margin-top: 0;
 }
 
 nav .menu-container {
@@ -208,6 +212,7 @@ nav .menu-container {
 footer {
   width: 100vw !important;
   background-color: rgb(0, 174, 255) !important;
+  font-size: 16px !important;
 }
 footer .container {
   height: 25vh !important;
@@ -217,7 +222,7 @@ footer .container {
   justify-content: space-between !important;
   max-width: 100% !important;
   padding: 2rem 5% 2rem 5% !important;
-  margin: 0;
+  margin: 0 !important;
 }
 footer .container .kolom-div {
   width: 20% !important;
@@ -231,6 +236,12 @@ footer .container .kolom-div {
   text-align: center !important;
   padding: 1rem 3rem 1rem 3rem !important;
 }
+
+footer .container .kolom-div h4 {
+  font-size: 1.2rem;
+  margin-top: 0;
+}
+
 footer .container .kolom-div ul {
   margin: 0 !important;
   padding: 0 !important;

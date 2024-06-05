@@ -28,6 +28,8 @@
             <input type="submit" value="Registreren">
         </form>
         <p>Heb je al een account? <a href="login.php">Hier inloggen</a></p>
+        <p>Klik <a href="index.php">Hier</a> om terug naar de homepage te gaan</p>
+
     </div>
 </body>
 </html>
