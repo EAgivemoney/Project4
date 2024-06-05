@@ -46,21 +46,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verander wachtwoord</title>
-    <link rel="stylesheet" href="./assets/css/global.css">
+    <?php include_once("assets/includes/startVanPagina.php"); ?>
     <link rel="stylesheet" href="./assets/css/logout.css">
-    <script src="https://kit.fontawesome.com/e6d1ddc709.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
-</head>
-<body>
+    <?php include("assets/includes/header.php") ?>
+    <main>
     <div class="container">
         <h1>Verander wachtwoord</h1>
         <?php if (!empty($errors)): ?>
@@ -82,5 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <button type="submit">Wachtwoord wijzigen</button>
         </form>
     </div>
+    </main>
+    <?php include("assets/includes/footer.php") ?>
 </body>
 </html>

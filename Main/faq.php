@@ -1,14 +1,10 @@
-<?php include_once("assets/includes/startVanPagina.php"); ?>
-    
+<?php include_once("assets/includes/startVanPagina.php"); ?> 
     <link rel="stylesheet" href="assets/css/faq.css">
-    <link rel="stylesheet" href="assets/css/global.css">
-    <link rel="stylesheet" href="assets/css/navbarEnFooter.css">
-    <Title>FAQ</Title>
    <?php include("assets/includes/header.php"); ?>
-        <hr>
+        <main>
         <section id="faq">
             <div class="container">
-                <div class="column">
+                <div class="row">
                     <h1 class="h3 text-center">FAQ</h1>
                     <ul class="class-list">
                         <li class="sd-item js-sd-item">
@@ -53,6 +49,7 @@
             <h1>
  
         </section>
+        </main>
         <?php include("assets/includes/footer.php"); ?>
 
     <script src="assets/scripts/javascript/faq.js"></script>

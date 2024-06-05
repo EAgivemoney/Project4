@@ -7,23 +7,10 @@ if (!isset($_SESSION['user_id']) || !isset($_SESSION['username']) || $_SESSION['
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://kit.fontawesome.com/e6d1ddc709.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/global.css">
+<?php include_once("assets/includes/startVanPagina.php"); ?>
     <link rel="stylesheet" href="./assets/css/account.css">
-    <link rel="stylesheet" href="./assets/css/scrollbar.css">
-</head>
-<body>
     <?php include("assets/includes/header.php") ?>
-    <hr>
+    <main>
     <div class="account-container">
         <h1>Welkom <?php echo htmlspecialchars($_SESSION['username']); ?></h1>
         <p>U bent succesvol ingelogd als gebruiker.</p>
@@ -42,6 +29,7 @@ if (!isset($_SESSION['user_id']) || !isset($_SESSION['username']) || $_SESSION['
             <button type="submit">Uitloggen</button>
         </form>
     </div>
+    </main>
     <?php include("assets/includes/footer.php") ?>
 </body>
 </html>

@@ -43,7 +43,7 @@ main {
     position: relative;
     padding-top: 0px;
     padding-bottom: 3rem;
-    margin-bottom: 12%;
+    margin-bottom: 20%
 }
 
 .p {
@@ -57,7 +57,7 @@ main {
 }
 
 .hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../fotos/p4picture7.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/p4picture7.jpg");
     height: 1100px;
     width: 100%;
     background-position: center;
@@ -102,7 +102,7 @@ main {
 }
 
 .side-image {
-    width: 210px;
+    width: 350px;
     height: 865px;
     margin-right: 20px;
 }
@@ -124,7 +124,7 @@ main {
 .button-container {
     display: flex;
     justify-content: center;
-    margin-top: 20px; /* Adds space above the button container */
+    margin-top: 20px;
 }
 
 .button-container button {

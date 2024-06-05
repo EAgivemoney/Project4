@@ -5,6 +5,10 @@ body {
     padding: 0;
     height: 100vh;
   }
+
+  main {
+    margin-top: 100px
+  }
   
   .account-container {
     background-color: #fff;

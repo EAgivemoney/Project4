@@ -1,9 +1,5 @@
 <?php include_once("assets/includes/startVanPagina.php"); ?>
-
-  <title>aboutus</title>
   <link rel="stylesheet" href="assets/css/aboutus.css">
-  <link rel="stylesheet" href="assets/css/global.css">
-  <link rel="stylesheet" href="assets/css/navbarEnFooter.css">
 
 
    <?php include("assets/includes/header.php"); ?>
@@ -16,7 +12,7 @@
     </div>
     <main class="mario">
         <section class="containerG">
-            <img src="./fotos/p4picture6.jpg" class="side-image" alt="Side Image">
+            <img src="assets/img/p4picture6.jpg" class="side-image" alt="Side Image">
             <div class="box">
                 <p><strong>MBO Utrecht wil jou helpen in de ontwikkeling van student tot zelfbewuste professional. Wij geven jou meer dan een opleiding en leren je meer dan een vak. Er is veel aandacht voor de ontwikkeling van talent, arbeidsvaardigheden, ondernemend gedrag, maatschappelijke betrokkenheid, respect voor elkaar en burgerschap.</strong></p>
                 <br>
@@ -34,13 +30,9 @@
            
            
                 <div class="button-container">
-                    <button onclick="window.location.href='contact.html'">Contact Us</button>
+                    <button onclick="window.location.href='contact.php'">Contact Us</button>
                 </div>
      </div>
         </section>
     </main>
-    
     <?php include("assets/includes/footer.php") ?>
-
-    </body>
-</html>

@@ -1,77 +1,81 @@
 <?php
-// Start de sessie om sessievariabelen te kunnen gebruiken
 session_start();
-// Vereiste configuratiebestanden inladen
-require 'config/config.php';
+require 'config/config.php'; // Inclusief configuratiebestand voor databaseverbinding
 
-// Controleren of het een POST-verzoek is
+// Maak verbinding met de database
+$conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+
+// Controleer of de verbinding is geslaagd
+if ($conn->connect_error) {
+    die("Verbinding mislukt: " . $conn->connect_error);
+}
+
+// Controleer of het een POST-verzoek is
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Een nieuwe databaseverbinding maken
-    $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
-
-    // Controleren of de verbinding is geslaagd
-    if ($conn->connect_error) {
-        // In geval van een fout, stoppen en een foutmelding weergeven
-        die("Connection failed: " . $conn->connect_error);
-    }
-
-    // Gebruikersnaam en wachtwoord van het formulier ophalen en voorkomen dat er SQL-injectie plaatsvindt
+    // Ontvang en ontsnap gebruikersinvoer
     $user = $conn->real_escape_string($_POST['username']);
+    $email = $conn->real_escape_string($_POST['email']);
     $pass = $_POST['password'];
-
-    // SQL-query voorbereiden om gebruikersgegevens op te halen
-    $sql = "SELECT Id, Username, Password, Status FROM login WHERE Username = ?";
-    $stmt = $conn->prepare($sql);
-    if ($stmt) {
-        // Gebruikersnaam parameter binden aan de query
-        $stmt->bind_param('s', $user);
-        // Query uitvoeren
-        $stmt->execute();
-        // Resultaat ophalen
-        $result = $stmt->get_result();
-
-        // Controleren of er rijen zijn teruggegeven
-        if ($result->num_rows > 0) {
-            // Rijgegevens ophalen
-            $row = $result->fetch_assoc();
-            // Controleren of het wachtwoord overeenkomt met de opgeslagen hash
-            if ($pass === $row['Password']) {
-                // Sessievariabelen instellen voor ingelogde gebruiker
-                $_SESSION['user_id'] = $row['Id'];
-                $_SESSION['username'] = $row['Username'];
-                $_SESSION['status'] = $row['Status'];
-
-                // Doorsturen naar de juiste pagina op basis van gebruikersstatus
-                if ($row['Status'] == 'Admin') {
-                    header("Location: ../../../admin.php");
-                } else {
-                    header("Location: ../../../account.php");
-                }
-                // Stoppen om verdere verwerking te voorkomen
-                exit();
-            } else {
-                // Foutmelding instellen voor ongeldig wachtwoord
-                $_SESSION['error'] = "Ongeldig wachtwoord";
-            }
-        } else {
-            // Foutmelding instellen voor ongeldige gebruikersnaam
-            $_SESSION['error'] = "Ongeldige gebruikersnaam";
-        }
-        // Statement sluiten
-        $stmt->close();
-    } else {
-        // Foutmelding instellen voor mislukte voorbereiding van de query
-        $_SESSION['error'] = "Er is iets misgegaan. Probeer het later opnieuw.";
+    $confirm_pass = $_POST['confirm_password'];
+    
+    // Controleer of wachtwoorden overeenkomen
+    if ($pass !== $confirm_pass) {
+        $_SESSION['registration_message'] = "Wachtwoorden komen niet overeen.";
+        header("Location: ../../../register.php");
+        exit();
     }
-    // Databaseverbinding sluiten
+
+    // Controleer of e-mail eindigt op .com of .nl
+    if (!preg_match('/\.(com|nl)$/', $email)) {
+        $_SESSION['registration_message'] = "E-mail moet eindigen op .com of .nl.";
+        header("Location: ../../../register.php");
+        exit();
+    }
+
+    // Controleer of gebruikersnaam minimaal 3 tekens lang is
+    if (strlen($user) < 3) {
+        $_SESSION['registration_message'] = "De gebruikersnaam moet minimaal 3 tekens lang zijn.";
+        header("Location: ../../../register.php");
+        exit();
+    }
+
+    // Controleer of wachtwoord minimaal 8 tekens lang is
+    if (strlen($pass) < 8) {
+        $_SESSION['registration_message'] = "Het wachtwoord moet minimaal 8 tekens lang zijn.";
+        header("Location: ../../../register.php");
+        exit();
+    }
+
+    // Controleer of gebruikersnaam of e-mail al bestaat in de database
+    $sql_check_username = "SELECT * FROM login WHERE Username = '$user' OR Email = '$email'";
+    $result_check_username = $conn->query($sql_check_username);
+    if ($result_check_username->num_rows > 0) {
+        $row = $result_check_username->fetch_assoc();
+        if ($row['Username'] == $user) {
+            $_SESSION['registration_message'] = "Gebruikersnaam bestaat al.";
+        } elseif ($row['Email'] == $email) {
+            $_SESSION['registration_message'] = "E-mail bestaat al.";
+        }
+        header("Location: ../../../register.php");
+        exit();
+    }
+
+    // Voeg nieuwe gebruiker toe aan de database
+    $sql = "INSERT INTO login (Username, Email, Password, Status) VALUES ('$user', '$email', '$pass', 'User')";
+
+    if ($conn->query($sql) === TRUE) {
+        $_SESSION['registration_message'] = "Account geregistreerd!";
+        header("Location: ../../../register.php");
+        exit();
+    } else {
+        $_SESSION['registration_message'] = "Fout: " . $conn->error;
+        header("Location: ../../../register.php");
+        exit();
+    }
+
     $conn->close();
-    // Terugsturen naar het inlogformulier in geval van fout
-    header("Location: ../../../login.php");
-    exit();
 } else {
-    // Foutmelding instellen voor ongeldige verzending van het formulier
-    $_SESSION['error'] = "Verzend het formulier.";
-    // Terugsturen naar het inlogformulier
-    header("Location: ../../../login.php");
+    $_SESSION['registration_message'] = "Ongeldige verzoekmethode.";
+    header("Location: ../../../register.php");
     exit();
 }

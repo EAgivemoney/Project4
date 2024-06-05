@@ -1,9 +1,5 @@
   <?php include_once("assets/includes/startVanPagina.php"); ?>
-    
-    <title>Homepage</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/global.css">
-    <link rel="stylesheet" href="assets/css/navbarEnFooter.css">
 
 
    <?php include("assets/includes/header.php"); ?>

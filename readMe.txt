@@ -1,1 +1,1 @@
-Sprint review 2 = 6 Juni. Hou daar rekening mee
+Sprint review 3 = 24 Juni. Hou daar rekening mee
