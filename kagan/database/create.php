@@ -11,9 +11,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt = $pdo->prepare($sql);
 
     if ($stmt->execute(['name' => $name, 'email' => $email, 'phone' => $phone, 'message' => $message])) {
-        echo "This blud got saved into our cool database yo....";
+        echo "Yes!! Your message got saved!";
     } else {
-        echo "Ik weet niet wat je hebt gedaan maar bro je hebt een lijpe skillissue";
+        echo "Idk what have you have done but you failed to get saved in to our database";
     }
 }
 ?>

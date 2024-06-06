@@ -1,22 +1,22 @@
 <?php
 session_start();
 
-// Controleer of het inlogformulier is verzonden
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    // Controleer of de ingevoerde gebruikersnaam en wachtwoord overeenkomen met de admincredentials
+   
     if ($username === 'root' && $password === '0') {
-        // Gebruiker is een admin, sla de inloggegevens op in de sessie
+       
         $_SESSION['username'] = $username;
         $_SESSION['password'] = $password;
 
-        // Doorsturen naar de adminpagina
+       
         header('Location: admin.php');
         exit;
     } else {
-        // Gebruiker heeft ongeldige inloggegevens ingevoerd
+
         $error = 'Invalid username or password';
     }
 }
@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(to bottom right, #f0f0f0, #dcdcdc); /* Define the gradient colors */
+            background: linear-gradient(to bottom right, #f0f0f0, #dcdcdc); 
             margin: 0;
             padding: 0;
             display: flex;

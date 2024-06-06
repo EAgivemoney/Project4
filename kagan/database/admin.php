@@ -1,13 +1,13 @@
 <?php
 session_start();
 
-// Controleer of de gebruiker is ingelogd als admin
+
 if (!isset($_SESSION['username']) || $_SESSION['username'] !== 'root' || $_SESSION['password'] !== '0') {
-    header('Location: login.php'); // Als de gebruiker geen admin is, doorsturen naar de loginpagina
+    header('Location: login.php'); 
     exit;
 }
 
-// Verbinding maken met de database en contacts ophalen
+
 $host = 'localhost';
 $db   = 'contactpage';
 $user = 'root';
@@ -41,7 +41,7 @@ $contacts = $stmt->fetchAll();
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(to bottom right, #f0f0f0, #dcdcdc); /* Define the gradient colors */
+            background: linear-gradient(to bottom right, #f0f0f0, #dcdcdc); 
             color: #000;
             margin: 0;
             position: relative;
@@ -68,7 +68,7 @@ $contacts = $stmt->fetchAll();
             background: rgba(255, 255, 255, 0.8);
             padding: 20px;
             border-radius: 10px;
-            z-index: 2; /* Ensure it appears above the background stripes */
+            z-index: 2; 
         }
 
         h1 {
@@ -96,15 +96,15 @@ $contacts = $stmt->fetchAll();
             background-color: #f9f9f9;
         }
 
-        /* Added CSS for word wrapping and max width */
+   
         td {
             word-wrap: break-word;
             word-break: break-all;
         }
 
         td:nth-child(4) {
-            max-width: 300px; /* Adjust the value as needed */
-            white-space: pre-wrap; /* Ensures that the text wraps */
+            max-width: 300px; 
+            white-space: pre-wrap; 
         }
     </style>
 </head>
