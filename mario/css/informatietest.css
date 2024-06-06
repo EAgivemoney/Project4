@@ -59,16 +59,15 @@ main {
 
   padding-top: 200px;
   padding-bottom: 200px;
- 
 }
+
 
 .FotoBoxL {
-  float:left;
+  float: left;
   object-fit: cover;
-
 }
 .FotoBoxR {
-  float:right;
+  float: right;
   object-fit: cover;
 }
 

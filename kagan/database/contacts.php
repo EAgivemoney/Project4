@@ -1,5 +1,5 @@
 <?php
-// Verbinding maken met de database
+
 $host = 'localhost';
 $db   = 'contactpage';
 $user = 'root';
