@@ -1,6 +1,8 @@
 <?php include_once("assets/includes/startVanPagina.php"); ?>
+  
   <link rel="stylesheet" href="assets/css/informatie.css">
-   <?php include("assets/includes/header.php"); ?>
+
+  <?php include("assets/includes/header.php"); ?>
 <div>
 <div class="FotoBoxL">
   <img src="assets/img/p4picture2.jpg" alt="">
