@@ -238,8 +238,8 @@ footer .container .kolom-div {
 }
 
 footer .container .kolom-div h4 {
-  font-size: 1.2rem;
-  margin-top: 0;
+  font-size: 1.2rem !important;
+  margin-top: 0 !important;
 }
 
 footer .container .kolom-div ul {

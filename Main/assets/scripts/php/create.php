@@ -12,7 +12,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($stmt->execute(['name' => $name, 'email' => $email, 'phone' => $phone, 'message' => $message])) {
         echo "Uw bericht is opgeslagen in onze database!";
-    } else {
-        echo "Er is iets fouts gegaan...";
+        header("../../../contact.php");
     }
 }
