@@ -46,6 +46,7 @@ const stabiliteitSpans = document.querySelectorAll(".stabiliteit");
 const kopenKnoppen = document.querySelectorAll(".kopen");
 const verkopenKnoppen = document.querySelectorAll(".verkopen");
 const aandelenSpans = document.querySelectorAll(".aandelen");
+const stocks = documentquerySelectorAll(".stocks");
 
 let updateInterval;
 
@@ -86,6 +87,7 @@ function updateStocks() {
 
         if((Waarde - parseFloat(waardeSpans[index].textContent)) > 200) {
             Waarde = (parseFloat(waardeSpans[index].textContent) + 200).toFixed(2);
+
         }
 
         
