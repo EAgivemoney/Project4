@@ -11,6 +11,9 @@ body .Youri {
   left: 40%;
   border-radius: 5px;
 }
+body .Youri .game .game-window{
+  padding: 1rem;
+}
 body .Youri .game .game-window .stock-market {
   display: flex;
   flex-direction: row;
@@ -26,6 +29,10 @@ body .Youri .game .game-window .stock-market .stock {
   justify-content: space-between;
   height: 100%;
   background-color: white;
+}
+
+.unity .kopen{
+  margin-top: 1rem;
 }
 body .Youri .game .game-window .stock-market .highscore {
   display: flex;
