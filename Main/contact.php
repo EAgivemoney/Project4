@@ -28,7 +28,7 @@
             <div><p>(06 123456789)</p></div>
             <div><p class="bold">UTRECHT</p></div>
             <div><p>Australiëlaan 25, 3526 AB Utrecht</p></div>
-            <div><p class="bold">OPSTUREN</p></div>
+            <div><p class="bold">POST OPSTUREN</p></div>
             <div><p>Australiëlaan 25, 3526 AB Utrecht</p></div>
         </div>
     </div>
