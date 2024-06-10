@@ -218,7 +218,7 @@ nav .menu-container {
 
 footer {
   width: 100vw !important;
-  background-color: rgb(0, 174, 255) !important;
+  background-color: rgb(0, 174, 255);
   font-size: 16px !important;
   padding: 2rem 5% 2rem 5% !important;
 }
@@ -233,7 +233,7 @@ footer .container {
 }
 footer .container .kolom-div {
   width: 20% !important;
-  height: 25vh !important;
+  height: 28vh !important;
   box-sizing: border-box !important;
   border: 1px solid rgb(96, 207, 255) !important;
   border-radius: 10px !important;

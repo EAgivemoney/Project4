@@ -46,7 +46,9 @@ const stabiliteitSpans = document.querySelectorAll(".stabiliteit");
 const kopenKnoppen = document.querySelectorAll(".kopen");
 const verkopenKnoppen = document.querySelectorAll(".verkopen");
 const aandelenSpans = document.querySelectorAll(".aandelen");
-const stocks = documentquerySelectorAll(".stocks");
+const stocks = document.querySelectorAll(".stock");
+
+
 
 let updateInterval;
 
@@ -84,6 +86,16 @@ function updateStocks() {
         }
         
         var Waarde = (parseFloat(waardeSpans[index].textContent) * (randomMarktschatting/100 * Schommeling)).toFixed(2);
+
+        if(Waarde > parseFloat(waardeSpans[index].textContent))
+        {   stocks[index].classList.add("increase");
+           stocks[index].classList.remove("decrease");
+        } else
+        {
+           stocks[index].classList.add("decrease");
+           stocks[index].classList.remove("increase");
+        }
+
 
         if((Waarde - parseFloat(waardeSpans[index].textContent)) > 200) {
             Waarde = (parseFloat(waardeSpans[index].textContent) + 200).toFixed(2);
@@ -143,7 +155,7 @@ function verkoopAandeel(index) {
 // Functie om de timer te starten
 function startTimer() {
     clearInterval(updateInterval); // Stop eerst de huidige interval, als die er is
-    updateInterval = setInterval(updateStocks, 50); // Start een nieuwe interval. Moet nog een goed getal bedenken voor de snelheid.
+    updateInterval = setInterval(updateStocks, 100); // Start een nieuwe interval. Moet nog een goed getal bedenken voor de snelheid.
 }
 
 // Functie om de timer te stoppen
