@@ -2,69 +2,76 @@
 session_start();
 require 'config/config.php'; // Inclusief configuratiebestand voor databaseverbinding
 
-// Maak verbinding met de database
+$errors = array();
+
+// Make connection to the database
 $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
-// Controleer of de verbinding is geslaagd
+// Check if the connection was successful
 if ($conn->connect_error) {
-    die("Verbinding mislukt: " . $conn->connect_error);
+    die("Connection failed: " . $conn->connect_error);
 }
 
-// Controleer of het een POST-verzoek is
+// Check if it's a POST request
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Ontvang en ontsnap gebruikersinvoer
+    // Receive and escape user input
     $user = $conn->real_escape_string($_POST['username']);
     $email = $conn->real_escape_string($_POST['email']);
     $pass = $_POST['password'];
     $confirm_pass = $_POST['confirm_password'];
-    
-    // Controleer of wachtwoorden overeenkomen
+
+    // Store the form data in session
+    $_SESSION['form_data'] = [
+        'username' => $user,
+        'email' => $email
+    ];
+
+    // Check if passwords match
     if ($pass !== $confirm_pass) {
-        $_SESSION['registration_message'] = "Wachtwoorden komen niet overeen.";
-        header("Location: ../../../register.php");
-        exit();
+        $errors['confirm_password'] = "Wachtwoorden komen niet overeen.";
     }
 
-    // Controleer of e-mail eindigt op .com of .nl
+    // Check if email ends with .com or .nl
     if (!preg_match('/\.(com|nl)$/', $email)) {
-        $_SESSION['registration_message'] = "E-mail moet eindigen op .com of .nl.";
-        header("Location: ../../../register.php");
-        exit();
+        $errors['email'] = "E-mail moet eindigen op .com of .nl.";
     }
 
-    // Controleer of gebruikersnaam minimaal 3 tekens lang is
+    // Check if username is at least 3 characters long
     if (strlen($user) < 3) {
-        $_SESSION['registration_message'] = "De gebruikersnaam moet minimaal 3 tekens lang zijn.";
-        header("Location: ../../../register.php");
-        exit();
+        $errors['username'] = "De gebruikersnaam moet minimaal 3 tekens lang zijn.";
     }
 
-    // Controleer of wachtwoord minimaal 8 tekens lang is
+    // Check if password is at least 8 characters long
     if (strlen($pass) < 8) {
-        $_SESSION['registration_message'] = "Het wachtwoord moet minimaal 8 tekens lang zijn.";
-        header("Location: ../../../register.php");
-        exit();
+        $errors['password'] = "Het wachtwoord moet minimaal 8 tekens lang zijn.";
     }
 
-    // Controleer of gebruikersnaam of e-mail al bestaat in de database
+    // Check if username or email already exists in the database
     $sql_check_username = "SELECT * FROM login WHERE Username = '$user' OR Email = '$email'";
     $result_check_username = $conn->query($sql_check_username);
     if ($result_check_username->num_rows > 0) {
         $row = $result_check_username->fetch_assoc();
         if ($row['Username'] == $user) {
-            $_SESSION['registration_message'] = "Gebruikersnaam bestaat al.";
+            $errors['username'] = "Gebruikersnaam bestaat al.";
         } elseif ($row['Email'] == $email) {
-            $_SESSION['registration_message'] = "E-mail bestaat al.";
+            $errors['email'] = "E-mail bestaat al.";
         }
+    }
+
+    // If there are errors, redirect back to registration page with errors
+    if (!empty($errors)) {
+        $_SESSION['registration_message'] = "Er zijn fouten opgetreden bij het registreren.";
+        $_SESSION['errors'] = $errors;
         header("Location: ../../../register.php");
         exit();
     }
 
-    // Voeg nieuwe gebruiker toe aan de database
+    // Add new user to the database
     $sql = "INSERT INTO login (Username, Email, Password, Status) VALUES ('$user', '$email', '$pass', 'User')";
 
     if ($conn->query($sql) === TRUE) {
         $_SESSION['registration_message'] = "Account geregistreerd!";
+        unset($_SESSION['form_data']); // Clear form data on successful registration
         header("Location: ../../../register.php");
         exit();
     } else {
@@ -72,10 +79,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         header("Location: ../../../register.php");
         exit();
     }
-
-    $conn->close();
 } else {
     $_SESSION['registration_message'] = "Ongeldige verzoekmethode.";
     header("Location: ../../../register.php");
     exit();
 }
+
+$conn->close();

@@ -15,16 +15,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    // Gebruikersnaam en wachtwoord van het formulier ophalen en voorkomen dat er SQL-injectie plaatsvindt
-    $user = $conn->real_escape_string($_POST['username']);
-    $pass = $_POST['password'];
+    // Identifier (gebruikersnaam of e-mail) en wachtwoord van het formulier ophalen en voorkomen dat er SQL-injectie plaatsvindt
+    $identifier = $conn->real_escape_string($_POST['identifier']);
+    $password = $_POST['password'];
 
     // SQL-query voorbereiden om gebruikersgegevens op te halen
-    $sql = "SELECT Id, Username, Password, Status FROM login WHERE Username = ?";
+    $sql = "SELECT Id, Username, Email, Password, Status FROM login WHERE Username = ? OR Email = ?";
     $stmt = $conn->prepare($sql);
     if ($stmt) {
-        // Gebruikersnaam parameter binden aan de query
-        $stmt->bind_param('s', $user);
+        // Identifier parameter binden aan de query (zowel gebruikersnaam als e-mail)
+        $stmt->bind_param('ss', $identifier, $identifier);
         // Query uitvoeren
         $stmt->execute();
         // Resultaat ophalen
@@ -35,15 +35,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // Rijgegevens ophalen
             $row = $result->fetch_assoc();
             // Controleren of het wachtwoord overeenkomt met de opgeslagen hash
-            if ($pass === $row['Password']) {
+            if ($password === $row['Password']) {
                 // Sessievariabelen instellen voor ingelogde gebruiker
                 $_SESSION['user_id'] = $row['Id'];
                 $_SESSION['username'] = $row['Username'];
                 $_SESSION['status'] = $row['Status'];
+                $_SESSION['email'] = $row['Email'];
 
                 // Doorsturen naar de juiste pagina op basis van gebruikersstatus
                 if ($row['Status'] == 'Admin') {
                     header("Location: ../../../admin.php");
+                } else if ($row['Status'] == 'Banned') {
+                    header("Location: ../../../banned.php");
+                } else if ($row['Status'] == 'Owner') {
+                    header("Location: ../../../owner.php");
                 } else {
                     header("Location: ../../../account.php");
                 }
@@ -53,8 +58,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $_SESSION['error'] = "Ongeldig wachtwoord";
             }
         } else {
-            // Foutmelding instellen voor ongeldige gebruikersnaam
-            $_SESSION['error'] = "Ongeldige gebruikersnaam";
+            // Foutmelding instellen voor ongeldige gebruikersnaam of e-mail
+            $_SESSION['error'] = "Ongeldige gebruikersnaam of e-mail";
         }
         // Statement sluiten
         $stmt->close();

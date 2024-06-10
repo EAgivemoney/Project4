@@ -62,7 +62,15 @@ INSERT INTO `highscore` (`id`, `name`, `score`, `date`) VALUES
 (1, 'youri', 500, '2024-05-16'),
 (2, 'youri', 500, '2024-05-16'),
 (3, 'youri2', 340, '2024-05-16'),
-(4, 'youri3', 500, '2024-05-16');
+(4, 'youri3', 500, '2024-05-16'),
+(5, 'winner', 500, '2024-05-23'),
+(6, 'loser', 200, '2024-05-23'),
+(7, 'loser2', 500, '2024-05-23'),
+(8, 'test6', 500, '2024-05-23'),
+(9, 'gamer7', 500, '2024-05-23'),
+(10, 'noobmaster79', 500, '2024-05-23'),
+(11, 'traderking 42', 500, '2024-05-23'),
+(12, 'youri', 15015, '2024-05-27');
 
 -- --------------------------------------------------------
 
@@ -76,7 +84,7 @@ CREATE TABLE IF NOT EXISTS `login` (
   `Username` varchar(20) NOT NULL,
   `Email` varchar(100) NOT NULL,
   `Password` varchar(40) NOT NULL,
-  `Status` enum('User','Admin') NOT NULL DEFAULT 'User',
+  `Status` enum('Banned','User','Admin','Owner') NOT NULL DEFAULT 'User',
   PRIMARY KEY (`Id`),
   UNIQUE KEY `Username` (`Username`),
   UNIQUE KEY `Email` (`Email`)

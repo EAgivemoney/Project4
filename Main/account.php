@@ -17,6 +17,7 @@ if (!isset($_SESSION['user_id']) || !isset($_SESSION['username']) || $_SESSION['
         <div class="account-info">
             <h2>Uw accountgegevens</h2>
             <p><strong>Gebruikersnaam:</strong> <?php echo htmlspecialchars($_SESSION['username']); ?></p>
+            <p><strong>E-mail:</strong> <?php echo htmlspecialchars($_SESSION['email']); ?></p>
         </div>
         <div class="account-actions">
             <h2>Acties</h2>

@@ -12,7 +12,7 @@
             }
         ?>
         <form action="assets/scripts/php/login.php" method="post">
-            <input type="text" name="username" placeholder="Gebruikersnaam" required>
+            <input type="text" name="identifier" placeholder="Gebruikersnaam of E-mail" required>
             <input type="password" name="password" placeholder="Wachtwoord" required>
             <input type="submit" value="Inloggen">
         </form>

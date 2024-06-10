@@ -1,0 +1,28 @@
+main {
+    padding-top: 100px;
+}
+
+.banned-container {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+h1 {
+    font-size: 32px;
+    color: red;
+    margin-bottom: 20px;
+}
+
+.banned-container button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.banned-container button:hover {
+    background-color: #0056b3;
+}
