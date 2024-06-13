@@ -2,6 +2,7 @@
     <link rel="stylesheet" href="assets/css/faq.css">
    <?php include("assets/includes/header.php"); ?>
         <main>
+        <div class="background-stripes"></div>
         <section id="faq">
             <div class="container">
                 <div class="row">
