@@ -1,20 +1,30 @@
-main {
+body {
   font-family: "Noto Sans JP", sans-serif;
   background-color: #f4f4f4;
   margin: 0;
   padding: 0;
+  height: 100vh;
+}
+
+main {
+  margin-top: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 150vh;
 }
 
 .admin-panel {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 90%;
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  text-align: center;
 }
 
 .admin-panel h1 {
@@ -26,14 +36,14 @@ main {
 }
 
 .admin-panel table {
-  width: 100%; /* Veranderd naar 100% om beter te passen */
-  max-width: 800px; /* Toegevoegd om de maximale breedte van de tabel te beperken */
+  width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.admin-panel table th, .admin-panel table td {
+.admin-panel table th,
+.admin-panel table td {
   padding: 12px;
   border: 1px solid #ddd;
   text-align: left;
@@ -56,10 +66,11 @@ main {
 
 .admin-panel form {
   margin-top: 20px;
+  text-align: center;
 }
 
 .admin-panel form button {
-  background-color: #007BFF;
+  background-color: #007bff;
   color: #fff;
   border: none;
   padding: 10px 20px;

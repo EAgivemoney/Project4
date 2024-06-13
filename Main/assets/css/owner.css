@@ -1,0 +1,104 @@
+body {
+    font-family: "Noto Sans JP", sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+main {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.owner-panel {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 80%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.owner-panel h1 {
+    margin-bottom: 20px;
+}
+
+.owner-panep p {
+    margin-bottom: 20px;
+}
+
+.owner-user-table,
+.owner-messages-table,
+.owner-highscores-table {
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.owner-users-table th,
+.owner-users-table td,
+.owner-messages-table th,
+.owner-messages-table td,
+.owner-highscores-table th,
+.owner-highscores-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.owner-users-table th,
+.owner-messages-table th,
+.owner-highscores-table th {
+    background-color: rgb(96, 207, 255);
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.owner-users-table tr:nth-child(even),
+.owner-messages-table tr:nth-child(even),
+.owner-highscores-table tr:nth-child(even) {
+    background-color: #f4f4f4;
+}
+
+.owner-users-table tr:hover,
+.owner-messages-table tr:hover,
+.owner-highscores-table tr:hover {
+    background-color: #ddd;
+}
+
+.owner-status-form,
+.owner-score-form {
+    margin: 0;
+}
+
+.owner-status-form select,
+.owner-score-form input[type="number"] {
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.owner-status-form button,
+.owner-score-form button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.owner-status-form button:hover,
+.owner-score-form button:hover {
+    background-color: #0056b3;
+}

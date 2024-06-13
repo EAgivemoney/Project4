@@ -13,8 +13,19 @@ if ($conn->connect_error) {
     die("Verbinding mislukt: " . $conn->connect_error);
 }
 
-// Query om gebruikersgegevens op te halen
-$userQuery = "SELECT username, email, status FROM login";
+// Query om gebruikersgegevens op te halen met gespecificeerde volgorde
+$userQuery = "
+    SELECT id, username, email, status
+    FROM login
+    ORDER BY
+        CASE
+            WHEN status = 'Owner' THEN 1
+            WHEN status = 'Admin' THEN 2
+            WHEN status = 'User' THEN 3
+            WHEN status = 'Banned' THEN 4
+            ELSE 5
+        END, username
+";
 $userResult = $conn->query($userQuery);
 
 // Query om berichtgegevens op te halen
@@ -23,37 +34,80 @@ $messageResult = $conn->query($messageQuery);
 
 include('assets/config/config.php');
 
-
-$dsn = "mysql:host=$dbHost;
-            dbname=$dbName;
-            charset=UTF8";
-
+$dsn = "mysql:host=$dbHost;dbname=$dbName;charset=UTF8";
 $pdo = new PDO($dsn, $dbUser, $dbPass);
 
 // Query om highscore-gegevens op te halen
-$sql = "SELECT name, score, date 
-        from highscore
-        Order BY score desc
-        LIMIT 10";
-        $statement = $pdo->prepare($sql);
+$sql = "SELECT id, name, score, date FROM highscore ORDER BY score DESC LIMIT 10";
+$statement = $pdo->prepare($sql);
 
-        $statement->execute();  
-                    
-        $result = $statement->fetchAll(PDO::FETCH_OBJ);
+if (!$statement) {
+    die('Query preparation failed: ' . $pdo->errorInfo()[2]);
+}
 
-        $scoreList = "";
-                    
-        foreach ($result as $persoonObject) {
-            $scoreList .= "<tr>
-                                <td>$persoonObject->name</td>
-                                 <td>Score: $persoonObject->score</td>
-                                 <td>$persoonObject->date</td>
-                            </tr>";
+$statement->execute();
+$result = $statement->fetchAll(PDO::FETCH_OBJ);
+
+$scoreList = "";
+
+foreach ($result as $persoonObject) {
+    $scoreList .= "<tr>
+                        <td>$persoonObject->name</td>
+                        <td>Score: $persoonObject->score</td>
+                        <td>$persoonObject->date</td>
+                    </tr>";
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST['update_user_status'])) {
+        $userId = $_POST['user_id'];
+        $newStatus = $_POST['new_status'];
+        
+        // Check if the user is trying to update an admin or owner
+        $getUserStatusQuery = "SELECT status FROM login WHERE id = ?";
+        $stmtAdminCheck = $conn->prepare($getUserStatusQuery);
+        $stmtAdminCheck->bind_param('i', $userId);
+        $stmtAdminCheck->execute();
+        $stmtAdminCheck->store_result();
+        $stmtAdminCheck->bind_result($userStatus);
+        $stmtAdminCheck->fetch();
+        
+        if ($userStatus === 'Admin' || $userStatus === 'Owner') {
+            // Admins cannot update other admins or owner's status
+            header("Location: admin.php");
+            exit();
+        }
+        
+        // Update user status
+        $updateStatusQuery = "UPDATE login SET status = ? WHERE id = ?";
+        $stmt = $conn->prepare($updateStatusQuery);
+        $stmt->bind_param('si', $newStatus, $userId);
+        $stmt->execute();
+        header("Location: admin.php");
+        exit();
+    }
+
+    if (isset($_POST['update_highscore'])) {
+        $scoreId = $_POST['score_id'];
+        $newScore = $_POST['new_score'];
+        // Admins can update any highscore
+        
+        $updateScoreQuery = "UPDATE highscore SET score = ? WHERE id = ?";
+        $stmt = $pdo->prepare($updateScoreQuery);
+
+        if (!$stmt) {
+            die('Query preparation failed: ' . $pdo->errorInfo()[2]);
         }
 
+        $stmt->bindParam(1, $newScore, PDO::PARAM_INT);
+        $stmt->bindParam(2, $scoreId, PDO::PARAM_INT);
+        $stmt->execute();
+        header("Location: admin.php");
+        exit();
+    }
+}
+
 $conn->close();
-
-
 ?>
 
 <?php include_once("assets/includes/startVanPagina.php"); ?>
@@ -70,6 +124,7 @@ $conn->close();
                     <th>Gebruikersnaam</th>
                     <th>E-mail</th>
                     <th>Status</th>
+                    <th>Actie</th>
                 </tr>
             </thead>
             <tbody>
@@ -78,6 +133,21 @@ $conn->close();
                     <td><?php echo htmlspecialchars($row['username']); ?></td>
                     <td><?php echo htmlspecialchars($row['email']); ?></td>
                     <td><?php echo htmlspecialchars($row['status']); ?></td>
+                    <td>
+                        <?php if ($row['status'] !== 'Admin' && $row['status'] !== 'Owner'): ?>
+                        <form method="post" action="" class="admin-status-form">
+                            <input type="hidden" name="user_id" value="<?php echo $row['id']; ?>">
+                            <select name="new_status">
+                                <option value="Admin" <?php if ($row['status'] == 'Admin') echo 'selected'; ?>>Admin</option>
+                                <option value="User" <?php if ($row['status'] == 'User') echo 'selected'; ?>>User</option>
+                                <option value="Banned" <?php if ($row['status'] == 'Banned') echo 'selected'; ?>>Banned</option>
+                            </select>
+                            <button type="submit" name="update_user_status">Bijwerken</button>
+                        </form>
+                        <?php else: ?>
+                        <p>Kan niet wijzigen</p>
+                        <?php endif; ?>
+                    </td>
                 </tr>
                 <?php endwhile; ?>
             </tbody>
