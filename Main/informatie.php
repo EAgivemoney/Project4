@@ -14,7 +14,7 @@
     </div>
     <main>
         <section class="containerG">
-            <img src="./fotos/p4picture6.jpg" class="side-image" alt="Side Image">
+            <img src="assets/img/p4picture6.jpg" class="side-image" alt="Side Image">
             <div class="box">
                 <h2>Day trading</h2>
                 <br>
