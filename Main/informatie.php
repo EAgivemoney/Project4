@@ -3,172 +3,97 @@
   <link rel="stylesheet" href="assets/css/informatie.css">
 
   <?php include("assets/includes/header.php"); ?>
-  <div class="background-stripes"></div> 
-<div>
-<div class="FotoBoxL">
-  <img src="assets/img/p4picture2.jpg" alt="">
-</div>
-<div class="FotoBoxR">
-  <img src="assets/img/p4picture1.jpg" alt="" width="900" height="620">
-</div>
-</div>
-
-  <main>
-
-    <div class="main">
-    <!--begin van informatie bar -->
-    <div class=" content containerB">
-
-      <h3> Praktische informatie</h3>
+  <div class="hero-image">
+        <div class="hero-text">
+            
+        </div>
     </div>
-      <div class="content containerB">
-      
-        <div class="info-1 ">
-        <p class="wrapper-PI">duur
-          <br>
-          3 jaar
-        </p>
-      </div>
+    <main>
+        <section class="containerG">
+            <img src="./fotos/p4picture6.jpg" class="side-image" alt="Side Image">
+            <div class="box">
+                <h2>Day trading</h2>
+                <br>
+                <p class="ColorG">Day Trading en Market Trends</p>
+                <br>
+                <div class="insider">
+                <div class="info-1 ">
+                    <p class="">
+                        <ul>
+
+                      <li> NIVEAU 4 </li>
+
+                      <li> BOL </li>
+                      
+                      <li> 3 JR </li>
+                    </ul>
+                </p>
+              
+                  </div>
+                </div>
+                <br>
+        
+            <div class="insider2">
+                <li><label>academie</label><strong>ICT Academia</strong></li>
+            </div>
+            <div class="insider2">
+                <li><label>locatie</label><strong>Australiëlaan 25, Utrecht</strong></li>
+            </div>    
+            <div class="insider2">
+                <li><label> crebo nr./naam</label><strong>26000 / Day Trading & Market Trends</strong></li>
+            </div>
+            <div class="insider2">
+                <li><label>MHBO</label><strong>Nee</strong></li>
+            </div>
+                
+            <div class="insider2">
+                <li><label>versnellen</label><strong>Ja, in overleg met de opleiding</strong></li>
+            </div>    
+                <div class="insider2">
+                <li> <label>kosten</label>Voor deze opleiding betaal je lesgeld als je op 1 augustus ouder bent dan 18 jaar. Verder moet je rekening houden met de aanschaf van een laptop en kosten voor boeken en andere leermiddelen. Daarvoor moet je rekening houden met onderstaande kosten (ongeveer):
+                </li>
+                </div>
+                <br>
+                <div>
+                   
+                    <ul>
+                    <li>Leerjaar 1: €270,-</li>
+                    <li>Leerjaar 2: €70,-</li>
+                    <li>Leerjaar 3: €70,-</li>
+                    <li>Laptop: €900,-</li>
+                    </ul>
+                </div>
+            
+                <br>
+                <br>
+
+                <div class="video">
+
+                    <iframe width="625px" height="351px"  src="https://www.youtube.com/embed/I9unIJnobQU" frameborder="0.1"></iframe>
+                   
+                  </div>
+
+                <div class="button-container">
+                    <button onclick="window.location.href='contact.html'">schrijf je Nu in</button>
+                </div>
+                </div>
+            </section>
+
+            
+            <section class="containerB">
+
+                <div class="box">
+
+                    <h5 class="insider3">opleiding</h5>
+                </div>
+
+            <p></p>
+
+            </section>
     
-      <div class="info-2">
-        <p class="wrapper-PI">niveau 
-          <br>
-           4</p>
-      
-      </div>
-
-      <div class="info-3">
-        <p class="wrapper-PI">leerweg
-          <br>
-          BOL
-        </p>
-      </div>
-
-      <div class="info-4">
-        <p class="wrapper-PI">start
-          <br>
-          aug 2024
-        </p>
-  
-      </div>
-
-    </div>
-    <!--eind van informatie bar-->
-
-    <!--begin van informatie over day trading-->
-
-    <div class="containerLB">
-      <div class="item-2">
-			
-				 <p>academie:    <strong> <a href="https://www.mboutrecht.nl/academies/ict-academie/">ICT Academie</a></strong>
-				
-         <p>locatie:    <strong>(<a target="_blank" href="https://goo.gl/maps/ZasM6W2b4TJEjizF6">Australiëlaan 25, Utrecht</a>)</strong>
-
-         <p> crebo nr. / naam:     <strong>26000 / Day Trading & Market Trends</strong></p>
-				
-        <p>MHBO: <strong>Nee</strong></p>
-
-			  <p>versnellen: <strong>Ja, in overleg met de opleiding</strong></p>
-				
-          <p>kosten:   Voor deze opleiding betaal je lesgeld als je op 1 augustus ouder bent dan 18 jaar. Verder moet je rekening houden met de aanschaf van een laptop en kosten voor boeken en andere leermiddelen. Daarvoor moet je rekening houden met onderstaande kosten (ongeveer):
-          <em>Leerjaar 1: €270,-</em><br>
-          <em>Leerjaar 2: €70,-</em><br>
-          <em>Leerjaar 3: €70,-</em><br>
-          <em>Laptop: €900,-</em></p>
-        </strong></li></p>
-        </ul>
-      </div>
-    </div>
-       <!--eind van informatie bar-->
-
-      <!--begin van informatie over curriculom-->
-      <br> 
-      <br>
-      <div class=" content containerB">
-      <h3>Curriculum</h3>
-      </div>
-
-    <div class="colerblue">
-      <div class="containerM">
-        <div class="Bitem-1">
-          
-        <p>**Jaar 1: Fundamenten van Daghandelen**</p>
-        
-        <ul style="list-style-type:none;">
-          <li>Kennismaking met Financiële Markten</li>
-          <li>Basisprincipes van Technische Analyse</li>
-          <li>Begrip van Marktindicators</li>
-          <li>Risicomanagementstrategieën</li>
-          <li>Kennismaking met Handelsplatforms</li>
-          <li>Oefenen met Handelssimulaties</li>
-        </ul>
-      </div>
-      
-     <div class="bitem-2">
-          
-        <p>**Jaar 2: Geavanceerde Daghandelstechnieken**</p>
-        
-        <ul style="list-style-type:none;">
-          <li>Geavanceerde Technische Analyse</li>
-          <li>Grafiekpatronen en Trendanalyse</li>
-          <li>Scalping- en Momentumhandelsstrategieën</li>
-          <li>Opties en Futures Handel</li>
-          <li>Hefboomwerking en Marginhandel</li>
-          <li>Ontwikkelen van een Persoonlijk Handelsplan</li>
-       </ul>
-     </div>
-
-      <div class="bitem-3">
-        <p> **Jaar 3: Professionele Daghandelsstrategieën**</p>
-        
-        <ul style="list-style-type:none;">
-          <li>Algoritmisch Handelen en Geautomatiseerde Systemen</li>
-          <li>Geavanceerde Risicobeheertechnieken</li>
-          <li>Handelspsychologie en Emotionele Discipline</li>
-          <li>Opbouwen van een Handelsportefeuille</li>
-          <li>Terugtesten en Optimalisatie</li>
-          <li>Praktijkervaring en Stage in de Echte Wereld</li>
-        </ul>
-      </div>
-    </div>
-    
+    </main>
     <br>
-    
-    <div>
-        <p>**Lesrooster:**</p>
-        
-        <p>
-          De lessen worden gehouden tussen 09:00 en 16:00 uur, van maandag tot en met vrijdag.
-        </p>
-        <div>
-        <p> **Benodigdheden:**</p>
-        
-        <ul style="list-style-type:none;">
-          <li>Laptop met internettoegang</li>
-          <li>Handelssoftware (verstrekt door de school)</li>
-          <li>Notitieboekje en pen voor aantekeningen</li>
-          <li> Handelsaccount bij een effectenmakelaarsbedrijf (oefenaccount verstrekt)</li>
-          <li>Aanbevolen leesmateriaal en studieboeken (verstrekt door de school)</li>
-        </ul>  
-      <p>
-          Deze cursus biedt studenten hands-on ervaring, praktische inzichten en deskundige begeleiding om de vaardigheden te ontwikkelen die nodig zijn om succesvolle daghandelaren te worden. Afgestudeerden zullen goed voorbereid zijn om een carrière in daghandel na te streven of hun eigen handelsbedrijf te starten. Let op dat daghandelen hoge risico's met zich meebrengt en niet geschikt is voor iedereen. Het vereist discipline, focus en continu leren om te slagen in dit competitieve vakgebied.
-        </p>
-        </div>
-        </div>
-      </div>
-    </div>
-           <!--eind van informatie bar-->
-  
-    </div>
-
-
-
-    <div class="video">
-
-      <iframe width="740" height="395" src="https://www.youtube.com/embed/Em9JCcknZuc" frameborder="0.1"></iframe>
-    
-    </div>
-  </main>
+    <br>
  
 
   <?php include("assets/includes/footer.php") ?>

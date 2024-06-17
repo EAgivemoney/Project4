@@ -1,231 +1,200 @@
-
-*body{
-  margin: 0px;
-}
-*{
-  box-sizing: border-box;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-
-body{
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  text-align: center;
-  font-size: 24px;
-  display:flex;
-  flex-direction: column;
+* {
+    margin: 0;
+    padding: 0;
 }
 
+body {
+    height: 95vh;
+    background: rgb(255, 255, 255);
+    font-family: 'Arial Narrow', Arial;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+}
 
+h1 {
+    font-family: sans-serif;
+    font-size: 3rem;
+}
 
-/* Set the position of the main element to relative */
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Franklin Gothic Medium';
+    font-size: 2.99rem;
+}
+
+h6 {
+    color: rgb(29, 174, 236);
+    font-size: 1.3rem;
+}
+
 main {
-  position: relative;
-  padding-top: 0px; /* Add some padding to separate content from the header */
-  padding-bottom: 3rem;
+    position: relative;
+    padding-top: 0px;
+    padding-bottom: 3rem;
 }
 
-.background-stripes {
-  position: fixed; 
-  top: 0; 
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(45deg, transparent 75%, rgba(255, 255, 255, 0.1) 75%),
-              linear-gradient(-45deg, transparent 75%, rgba(0, 174, 255, 0.5) 75%);
-  background-size: 35px 35px;
-  z-index: -1; 
+.p {
+    font-size: 16px;
+    line-height: 28px;
+    color: #000;
+    font-family: Fira Sans, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
 }
 
-/* Styling for the background image */
-.bg-image {
-  
-  position:relative;
-  background-color: #f6f6f6;
-  background-image: url(../fotos/p4picture2.jpg);
-  background-repeat: no-repeat;
-  background-size: 1400 740;
-  
-  
-  color: white;
-
-  padding-top: 200px;
-  padding-bottom: 200px;
- 
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../fotos/p4picture7.jpg");
+    height: 1100px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-top: 15rem;
+    padding-bottom: 15rem;
 }
 
-.FotoBoxL {
-  float:left;
-  object-fit: cover;
-
-}
-.FotoBoxR {
-  float:right;
-  object-fit: cover;
-}
-
-/* begin van boxes and content classes en eind van header, footer, background images en banners */
-
-
-.content{
-  display: grid;
-  /*grid-template-columns: 33.3% 33.3% 33.3%;*/
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  max-width: 960px;
-  margin: 0 auto;
-  padding:1em 0 1em 0;
-  flex: 1 1 100px;
-
-  background-color: #20813a;
+.hero-text {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
 }
 
-/* Styling for the container */
+.hero-text button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 10px 25px;
+    color: black;
+    background-color: #ddd;
+    text-align: center;
+    cursor: pointer;
+    border: 5px solid;
+}
+
+.hero-text button:hover {
+    background-color: rgb(29, 174, 236);
+    color: white;
+}
+
+.containerG {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: -50px;
+    margin-bottom: 150px;
+}
 .containerB {
-  max-width:100%; /* Set maximum width of the container */
-  margin: auto; /* Center the container horizontally */
-  padding-left: 0; /* Add left padding */
-  padding-right: 0; /* Remove right padding */
-  background-color: #1daeec;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 20           rem;   
+    margin-bottom: 150px;
 }
 
-.containerLB {
-  max-width: 100%; /* Set maximum width of the container */
-  margin: auto; /* Center the container horizontally */
-  padding-left: 25rem; /* Add left padding */
-  padding-right: 20rem; /* Remove right padding */
-  background-color: #a3e2fc;
+.side-image {
+    width: 210px;
+    height: 865px;
+    margin-right: 20px;
 }
 
-.info-1 {
-  width: 75%; /* Set the width of the box */
-  height: auto; /* Change height to auto to accommodate content */
-  margin-top: 30px; /* Add top margin */
-  border-bottom-style:solid;
-  border-width: 0.5px;
-  border-color: silver;
-  margin: auto; /* Center the box horizontally */
-  display: flex; /* Use flexbox for layout */
-  justify-content: space-around; /* Space items evenly horizontally */
-}
-
-.info-2 {
-  width: 75%; /* Set the width of the box */
-  height: auto; /* Change height to auto to accommodate content */
-  margin-top: 30px; /* Add top margin */
-  border-bottom-style:solid;
-  border-width: 0.5px;
-  border-color: silver;
-  margin: auto; /* Center the box horizontally */
-  display: flex; /* Use flexbox for layout */
-  justify-content: space-around; /* Space items evenly horizontally */
-}
-
-.info-3 {
-  width: 75%; /* Set the width of the box */
-  height: auto; /* Change height to auto to accommodate content */
-  margin-top: 30px; /* Add top margin */
-  border-bottom-style:solid;
-  border-width: 0.5px;
-  border-color: silver;
-  margin: auto; /* Center the box horizontally */
-  display: flex; /* Use flexbox for layout */
-  justify-content: space-around; /* Space items evenly horizontally */
-}
-
-.info-4 {
-  width: 75%; /* Set the width of the box */
-  height: auto; /* Change height to auto to accommodate content */
-  margin-top: 30px; /* Add top margin */
-  border-bottom-style:solid;
-  border-width: 0.5px;
-  border-color: silver;
-  margin: auto; /* Center the box horizontally */
-  display: flex; /* Use flexbox for layout */
-  justify-content: space-around; /* Space items evenly horizontally */
-}
-
-.item-1 {
-  width: 100%; /* Adjust width to fit content better */
-  padding: 20px; /* Increase padding for better readability */
-  text-align: center; /* Center align text */
-  border-radius: 10px; /* Add rounded corners */
-}
-
-.item-2 {
-  width: 90%; /* Adjust width to fit content better */
-  padding: 20px; /* Increase padding for better readability */
-  text-align: center; /* Center align text */
-  border-radius: 10px; /* Add rounded corners */
-  margin-top: 0px; /* Adjust margin-top to create space between the boxes */
-}
-
-.wrapper-PI {  
-  width: 105px;
-  margin: 0 auto;
-  color: rgb(255, 255, 255);
-}
-
-.label{
-  align-content: left;
-  text-overflow: ellipsis;
-}
-
-.containerM{
- 
-  max-width: 1400px;
-  margin-top: auto;
-  margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 0;
-
-}
-
-.box-2{
-  width: 30%;
-  height: 600px;
-  
-  margin-top: 30px;
-  margin: auto;
-  border: 10px;
-
-
-}
-
-.Bitem-1, .Bitem-2, .Bitem-3{
-  width: 520px;
-  height: 600x;
-  padding: 10;
-  text-align:center;
-  border: 10px;
-  border-radius: 10px;
-  margin-top: 10rem;
-  margin: auto;
-
-}
-.colerblue{
-  max-width: 100%; /* Set maximum width of the container */
-  background-color: #a3e2fc;
-  padding-bottom: 3rem;
-}
-
-.containerM{
-
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-
-
+.box { 
+    position: relative;
+    width: 700px;
+    height: 865px;
+    padding: 64px;
+    box-sizing: border-box;
+    text-align: left;
+    background-color: white;
+    border: none;
 }
 
 
-.video {
-  
-     width: 750px;; /* Set the width of the box */
-  height: 400px; /* Change height to auto to accommodate content */
-  margin-top: 1000px; /* Add top margin */
-  margin: auto; /* Center the box horizontally */
-  display: flex; /* Use flexbox for layout */
-  justify-content: space-around; /* Space items evenly horizontally */
-  background-color: rgb(120, 116, 116);
+.color {
+    color: white;
 }
 
-/*# sourceMappingURL=informatie.css.map */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Adds space above the button container */
+}
+
+.button-container button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 10px 25px;
+    color: black;
+    background-color: rgb(29, 174, 236);
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid #000000; /* Adjusted border to make it lighter */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition effect */
+}
+
+.button-container button:hover {
+    background-color: rgb(144, 174, 236);
+    color: white;
+}
+.insider {
+    height: 60;
+    width: 513px;
+    border-top: 0.1rem solid rgba(0, 0, 0, .1);
+    border-bottom: 0.1rem solid rgba(0, 0, 0, .1);
+    color: rgb(0, 0, 0, .5);
+    line-height: 19px;
+    font-size: 15px;
+    text-align: right;
+}
+.insider2 {
+    height: 60;
+    width: 513px;
+    border-bottom: 0.1rem solid rgba(0, 0, 0, .1);
+    font-size: 15px;
+    line-height: 20px;
+    padding: 15px 0;
+
+}
+
+.insider3 {
+    height: 60;
+    width: 513px;
+    border-bottom: 0.1rem solid rgba(0, 0, 0, .1);
+    font-size: 15px;
+    line-height: 20px;
+    padding: 15px 0;
+
+}
+
+ul, li{
+    margin-left: 20px;
+    display:inline-flex;
+}
+
+label{
+    margin-left: 20px;
+    margin-right: 200px;
+}
+
+.ColorG {
+
+    color: rgba(0, 0, 0, .5);
+}
