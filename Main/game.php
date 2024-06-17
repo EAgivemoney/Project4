@@ -47,6 +47,8 @@
 
     <div class="col-12 col-l-4">
         <h4>Info</h4>
+        <h5>EPILEPTIE WARNING</h5>
+
         
         <p>In deze game ga je kennismaken met het kopen en verkopen van aandelen/cryptocurrency.
         Probeer zoveel mogelijk geld binnen te harken en kom bovenaan in de lijst te staan.

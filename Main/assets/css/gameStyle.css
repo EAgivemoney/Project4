@@ -2,7 +2,6 @@
 body .Youri {
   padding-top: 6%;
   padding-bottom: 3%;
-  margin-top: 2rem;
 }
 .saveData {
   position: absolute;
@@ -44,10 +43,15 @@ section.uitleg{
 section div{
   text-align: center;
   border: 2px solid black;
+  border-top: white;
+
   box-sizing: border-box;
 }
 section div *{
   background-color: white;
+}
+section div h5{
+  color: red;
 }
 .squares{
   list-style: square !important;
