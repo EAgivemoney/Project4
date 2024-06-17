@@ -4,7 +4,7 @@
     <main>
         <section>
             <div>
-                <form action="index.php" method="POST" id="inschrijfformulier" novalidate>
+                <form action="scripts/inschrijven.php" method="POST" id="inschrijfformulier" novalidate>
                 <h2>Vul het formulier in om uzelf aan te melden</h2>
 
                         
@@ -72,5 +72,5 @@
             </div>
         </section>
     </main>
-    <script src="js/script.js"></script>
+    <script src="scripts/script.js"></script>
 <?php include("includes/footer.php"); ?>

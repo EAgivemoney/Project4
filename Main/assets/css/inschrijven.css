@@ -1,15 +1,37 @@
-body{
+body {
     background-color: aqua;
-}
-main {
+  }
+  body main {
     padding-top: 7%;
     width: 80%;
     margin: 0 10% 0 10%;
-}
-
-
-form{
+  }
+  body main form {
+    margin: 3rem 0 3rem 0;
     display: flex;
     flex-direction: column;
-    
-}
+    background-color: white;
+    border-radius: 10px;
+    width: fit-content;
+    align-items: center;
+    padding: 1rem;
+  }
+  body main form .error {
+    height: 2rem;
+    color: red;
+  }
+  body main form .submit {
+    width: 10vw;
+  }
+  body main form .list {
+    display: flex;
+  }
+  body main form .list input {
+    width: 1vw;
+  }
+  body main form input {
+    width: 20vw;
+  }
+  
+  /*# sourceMappingURL=style.css.map */
+  
