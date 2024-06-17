@@ -55,11 +55,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 exit();
             } else {
                 // Foutmelding instellen voor ongeldig wachtwoord
-                $_SESSION['error'] = "Ongeldig wachtwoord";
+                $_SESSION['error'] = "Ongeldige gebruikersnaam, e-mail of wachtwoord";
             }
         } else {
             // Foutmelding instellen voor ongeldige gebruikersnaam of e-mail
-            $_SESSION['error'] = "Ongeldige gebruikersnaam of e-mail";
+            $_SESSION['error'] = "Ongeldige gebruikersnaam, e-mail of wachtwoord";
         }
         // Statement sluiten
         $stmt->close();

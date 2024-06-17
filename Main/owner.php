@@ -95,6 +95,7 @@ $conn->close();
 <link rel="stylesheet" href="./assets/css/owner.css">
 <?php include("assets/includes/header.php") ?>
 <main>
+    <div class="background-stripes"></div>
     <div class="owner-panel">
         <h1>Welkom, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h1>
         <p>Je bent succesvol ingelogd als eigenaar.</p>
@@ -181,9 +182,6 @@ $conn->close();
                 <?php endforeach; ?>
             </tbody>
         </table>
-        <form action="assets/scripts/php/logout.php" method="post">
-            <button type="submit">Uitloggen</button>
-        </form>
     </div>
 </main>
 <?php include("assets/includes/footer.php") ?>

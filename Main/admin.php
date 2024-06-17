@@ -114,6 +114,7 @@ $conn->close();
 <link rel="stylesheet" href="./assets/css/admin.css">
 <?php include("assets/includes/header.php") ?>
 <main>
+    <div class="background-stripes"></div>
     <div class="admin-panel">
         <h1>Welkom, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h1>
         <p>Je bent succesvol ingelogd als beheerder.</p>
@@ -186,9 +187,6 @@ $conn->close();
                 <?php echo $scoreList ?>
             </tbody>
         </table>
-        <form action="assets/scripts/php/logout.php" method="post">
-            <button type="submit">Uitloggen</button>
-        </form>
     </div>
 </main>
 <?php include("assets/includes/footer.php") ?>

@@ -12,9 +12,6 @@ if (!isset($_SESSION['user_id']) || $_SESSION['status'] !== 'Banned') {
 <main>
     <div class="banned-container">
         <h1>Je Bent Gebanned!</h1>
-        <form action="assets/scripts/php/logout.php" method="post">
-            <button type="submit">Uitloggen</button>
-        </form>
     </div>
 </main>
 <?php include("assets/includes/footer.php") ?>
