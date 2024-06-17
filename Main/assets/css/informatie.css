@@ -151,11 +151,11 @@ main {
     text-align: right;
 }
 
-ul,
-li {
+.list {
+    list-style-type: none;      
     margin-left: 20px;
     display: inline-flex;
-}
+  }
 
 label {
     margin-left: 20px;
