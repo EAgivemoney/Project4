@@ -101,6 +101,7 @@ main {
 .box {
     width: 100%;
     max-width: 700px;
+    height:auto;
     padding: 2rem;
     box-sizing: border-box;
     text-align: left;
@@ -140,6 +141,14 @@ main {
     width: 100%;
     border-bottom: 0.1rem solid rgba(0, 0, 0, 0.1);
     padding: 1rem 0;
+}
+
+.insider {
+    border-top: 0.1rem solid rgba(0, 0, 0, .1);
+    color: rgb(0, 0, 0, .5);
+    line-height: 19px;
+    font-size: 15px;
+    text-align: right;
 }
 
 ul,
@@ -195,4 +204,7 @@ label {
         justify-content: center;
         margin-top: 20px; /* Adds space above the button container */
     }
+}
+.containerB {
+    margin-left: 14rem;
 }
