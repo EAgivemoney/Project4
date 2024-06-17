@@ -10,15 +10,14 @@
 }
 
 body {
+    height: 95vh;
     background: rgb(255, 255, 255);
     font-family: 'Arial Narrow', Arial;
     text-align: center;
     color: rgb(0, 0, 0);
-    font-size: 16px;
+    font-size: 1.5rem;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center content horizontally */
-    min-height: 100vh; /* Ensure full viewport height */
 }
 
 h1 {
@@ -32,7 +31,7 @@ h4,
 h5,
 h6 {
     font-family: 'Franklin Gothic Medium';
-    font-size: 2.99rem;
+    font-size: 2rem;
 }
 
 h6 {
@@ -44,6 +43,16 @@ main {
     position: relative;
     padding-top: 0px;
     padding-bottom: 3rem;
+}
+
+.p {
+    font-size: 16px;
+    line-height: 28px;
+    color: #000;
+    font-family: Fira Sans, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
 }
 
 .hero-image {
@@ -82,6 +91,10 @@ main {
 .hero-text button:hover {
     background-color: rgb(29, 174, 236);
     color: white;
+}
+
+.containerG {
+    margin-top: -50px;
 }
 
 .containerG,

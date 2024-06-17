@@ -5,11 +5,11 @@
   <?php include("assets/includes/header.php"); ?>
 
 
-     <div class="hero-image">
+  <div class="hero-image">
         <div class="hero-text">
             <h1>Welcome to Day Trading</h1>
             <p>Learn the market trends and become a pro</p>
-            <button onclick="window.location.href='contact.html'">schrijf je Nu in</button>
+            <button onclick="window.location.href='inschrijven.php'">schrijf je Nu in</button>
         </div>
     </div>
     <main>
@@ -65,7 +65,7 @@
                     <iframe width="625px" height="400px" src="https://www.youtube.com/embed/I9unIJnobQU" frameborder="0.1"></iframe>
                 </div>
                 <div class="button-container">
-                    <button onclick="window.location.href='contact.html'">schrijf je Nu in</button>
+                    <button onclick="window.location.href='inschrijven.php'">schrijf je Nu in</button>
                 </div>
             </div>
         </section>
