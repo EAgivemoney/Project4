@@ -36,10 +36,10 @@
                         <label for="gender">*gender:</label>
                         <div class="list">
                             <label>Man:</label>
-                            <input type="radio" id="boy" name="gender" required>
+                            <input type="radio" id="boy" name="gender" value="Man" required>
 
                             <label>Vrouw:</label>
-                            <input type="radio" id="girl" name="gender" required>
+                            <input type="radio" id="girl" name="gender" value="Vrouw" required>
                         </div>
                         <div id="gender-error" class="error"></div>
 
