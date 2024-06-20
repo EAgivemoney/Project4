@@ -1,0 +1,74 @@
+// Variables
+$primary-color: #007BFF;
+$primary-hover-color: #0056b3;
+$background-color: #f4f4f4;
+$container-bg-color: #fff;
+$container-shadow-color: rgba(0, 0, 0, 0.1);
+$cyan-blue: #00FFFF; // Cyan blue color
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Styles
+.admin-panel {
+  @include flex-center;
+  flex-direction: column;
+  text-align: center;
+
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  p {
+    margin-bottom: 20px;
+  }
+
+  table {
+    width: 80%; // Adjust table width as needed
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Add box shadow for a raised effect
+
+    th, td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    th {
+      background-color: $cyan-blue; // Cyan blue color for table headers
+      color: #fff;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    tr:nth-child(even) {
+      background-color: $background-color; // Alternate row background color
+    }
+
+    tr:hover {
+      background-color: #ddd; // Hover background color
+    }
+  }
+
+  form {
+    margin-top: 20px;
+
+    button {
+      background-color: $primary-color;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $primary-hover-color;
+      }
+    }
+  }
+}
