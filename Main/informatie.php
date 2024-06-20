@@ -7,9 +7,8 @@
 
   <div class="hero-image">
         <div class="hero-text">
-            <h1>Welcome to Day Trading</h1>
-            <p>Learn the market trends and become a pro</p>
-            <button onclick="window.location.href='inschrijven.php'">schrijf je Nu in</button>
+            <h1>Welkom bij Day Trading</h1>
+            <p>Leer de markttrends en word een professional.</p>
         </div>
     </div>
     <main>
