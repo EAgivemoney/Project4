@@ -1,5 +1,5 @@
 <?php
-include_once('../config/config.php');
+include_once('../../config/config.php');
 
     $dsn = "mysql:host=$dbHost;
     dbname=$dbName;
@@ -75,5 +75,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "Fout bij het invoegen van gegevens: " . $statement->errorInfo()[2];
     }
-    header("Location: ../index.php");
+    header("Location: ../../../inschrijven.php");
 }
