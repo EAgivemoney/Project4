@@ -1,8 +1,8 @@
-
 body .Youri {
   padding-top: 6%;
   padding-bottom: 3%;
 }
+
 .saveData {
   position: absolute;
   background-color: white;
@@ -11,17 +11,30 @@ body .Youri {
   left: 40%;
   border-radius: 5px;
 }
-body .Youri .game .game-window{
+
+.background-stripes {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(223, 217, 217, 0.66) 75%, rgba(255, 255, 255, 0.1) 75%),
+              linear-gradient(-45deg, rgba(212, 212, 212, 0.305) 75%, rgb(0, 174, 255, 1) 75%);
+  background-size: 40px 40px;
+  z-index: -2;
+}
+
+body .Youri .game .game-window {
   padding: 1rem;
   text-align: center;
   border-top: 0.2rem solid black;
 }
+
 body .Youri .game .game-window .stock-market {
   display: flex;
   flex-direction: row;
   height: 78vh;
   background-color: white;
 }
+
 body .Youri .game .game-window .stock-market .stock {
   box-sizing: border-box;
   display: flex;
@@ -33,63 +46,72 @@ body .Youri .game .game-window .stock-market .stock {
   height: 100%;
 }
 
-section.uitleg{
+section.uitleg {
   padding: 0 4rem 0 4rem;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-
 }
-section div{
+
+section div {
   text-align: center;
   border: 2px solid black;
   border-top: white;
-
   box-sizing: border-box;
 }
-section div *{
+
+section div * {
   background-color: white;
 }
-section div h5{
+
+section div h5 {
   color: red;
 }
-.squares{
+
+.squares {
   list-style: square !important;
 }
-span.waarschuwing{
+
+span.waarschuwing {
   color: red;
 }
 
-
-.coin{
+.coin {
   height: 1.5rem;
 }
 
-.unity img{
+.unity img {
   aspect-ratio: 1 / 1;
 }
+
 body .Youri .game .game-window .stock-market .highscore {
   display: flex;
   justify-content: space-between;
   height: 100%;
 }
+
 body .Youri .game .game-window .stock-market .highscore .score-table {
   margin-top: 2rem;
   border-collapse: collapse;
   width: 100%;
 }
+
 body .Youri .game .game-window .stock-market .highscore .score-table td {
   position: relative;
 }
+
 body .Youri .game .game-window .stock-market .highscore .score-table tr:not(:last-child) {
   border-bottom: 1px solid black;
 }
+
 body .Youri .game .game-window .stock-market .highscore .score-table td:first-child {
   border-right: 1px solid black;
 }
+
 body .Youri .game .game-window .stock-market .highscore .buttons {
   height: 25%;
 }
+
 body .Youri .game .game-window .stock-market .highscore .buttons .button {
   height: 25%;
   width: 100%;
@@ -104,18 +126,19 @@ body .Youri .game .game-window .stock-market .highscore .buttons .button {
   display: none;
 }
 
-.increase
-{
+.increase {
   background-color: rgb(0, 192, 0);
 }
-button.kopen{
+
+button.kopen {
   background-color: rgb(96, 207, 255);
 }
-button.verkopen{
+
+button.verkopen {
   background-color: rgb(255, 174, 0);
 }
 
-.decrease
-{
+.decrease {
   background-color: red;
 }
+  

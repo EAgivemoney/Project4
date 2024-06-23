@@ -12,6 +12,7 @@
         </div>
     </div>
     <main>
+    <div class="background-stripes"></div>
         <section class="containerG">
             <img src="assets/img/p4picture6.jpg" class="side-image" alt="Side Image">
             <div class="box">
