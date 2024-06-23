@@ -60,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // If there are errors, redirect back to registration page with errors
     if (!empty($errors)) {
-        $_SESSION['registration_message'] = "Er zijn fouten opgetreden bij het registreren.";
+        $_SESSION['registration_message'] = "Wachtwoorden komen niet overeen.";
         $_SESSION['errors'] = $errors;
         header("Location: ../../../register.php");
         exit();

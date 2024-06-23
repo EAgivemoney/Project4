@@ -2,6 +2,7 @@
     <link rel="stylesheet" href="./assets/css/register.css">
     <?php include("assets/includes/header.php") ?>
     <main>
+        <div class="background-stripes"></div>
         <div class="register-container">
             <h2>Register</h2>
             <?php

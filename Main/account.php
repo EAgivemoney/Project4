@@ -23,7 +23,6 @@ if (!isset($_SESSION['user_id']) || !isset($_SESSION['username']) || $_SESSION['
             <div class="account-actions">
                 <h2>Acties</h2>
                 <ul>
-                    <li><a href="#">Profiel bijwerken</a></li>
                     <li><a href="change_password.php">Wachtwoord wijzigen</a></li>
                 </ul>
             </div>

@@ -10,6 +10,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['status'] !== 'Banned') {
 <link rel="stylesheet" href="./assets/css/banned.css">
 <?php include("assets/includes/header.php") ?>
 <main>
+    <div class="background-stripes"></div>
     <div class="banned-container">
         <h1>Je Bent Gebanned!</h1>
     </div>

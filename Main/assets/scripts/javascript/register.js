@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
     password.insertAdjacentElement("afterend", passwordError);
 
     const confirmPasswordError = document.createElement("div");
-    ConfirmPasswordError.classList.add("error-message");
+    confirmPasswordError.classList.add("error-message");
     confirmPassword.insertAdjacentElement("afterend", confirmPasswordError);
 
     form.addEventListener("submit", function(event) {
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         if (!/.+@.+\.(com|nl)$/.test(email.value.trim())) {
-            emailError.textContent = "E-mail moet endigen op .com of .nl";
+            emailError.textContent = "E-mail moet eindigen op .com of .nl";
             emailError.style.display = "block";
             valid = false;
         } else {
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (password.value.trim().length < 8) {
             passwordError.textContent = "Het wachtwoord moet minimaal 8 tekens lang zijn.";
-            passwordError.style.display = "block"
+            passwordError.style.display = "block";
             valid = false;
         } else {
             passwordError.style.display = "none";

@@ -2,6 +2,7 @@
     <link rel="stylesheet" href="./assets/css/login.css">
     <?php include("assets/includes/header.php") ?>
     <main>
+    <div class="background-stripes"></div>
     <div class="login-container">
         <h2>Login</h2>
         <?php

@@ -50,6 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="./assets/css/logout.css">
     <?php include("assets/includes/header.php") ?>
     <main>
+    <div class="background-stripes"></div>
     <div class="container">
         <h1>Verander wachtwoord</h1>
         <?php if (!empty($errors)): ?>
