@@ -29,7 +29,7 @@
                     <ul>
                         <?php
                             $current_page = basename($_SERVER['PHP_SELF']);
-                            $logout_pages = ['account.php', 'admin.php', 'banned.php', 'owner.php'];
+                            $logout_pages = ['account.php', 'admin.php', 'banned.php', 'owner.php', 'change_password.php'];
                             if (in_array($current_page, $logout_pages)) {
                                 echo '<li><a href="assets/scripts/php/logout.php">Uitloggen</a></li>';
                             } else {

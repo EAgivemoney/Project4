@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `inschrijven` (
   `infix` varchar(20) NOT NULL,
   `lastName` varchar(50) NOT NULL,
   `birthDate` date NOT NULL,
-  `gender` varchar(10) NOT NULL,
+  `gender` ENUM('Man', 'Vrouw') NOT NULL,
   `adres` varchar(50) NOT NULL,
   `postcode` varchar(20) NOT NULL,
   `email` varchar(50) NOT NULL,
@@ -49,8 +49,7 @@ CREATE TABLE IF NOT EXISTS `inschrijven` (
 --
 
 INSERT INTO `inschrijven` (`id`, `BurgerServiceNummer`, `firstName`, `infix`, `lastName`, `birthDate`, `gender`, `adres`, `postcode`, `email`, `tel`, `inschrijfDatum`) VALUES
-(1, 123456789, 'Youri', 'de ', 'Ron', '2003-06-03', 'on', '6 Adriaanstraat', '4175HB', 'deronyouri@gmail.com', '0642029443', '2024-06-17 10:45:35'),
-(2, 123456789, 'Youri2', 'de 2', 'Ron2', '2003-06-03', 'on', '6 Adriaanstraat2', '4175HB', 'deronyouri@gmail.com', '0642029443', '2024-06-17 11:20:24');
+(1, 123456789, 'Youri', 'de ', 'Ron', '2003-06-03', 'Man', '6 Adriaanstraat', '4175HB', 'deronyouri@gmail.com', '0642029443', '2024-06-17 10:45:35');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

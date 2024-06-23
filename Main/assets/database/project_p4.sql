@@ -96,7 +96,9 @@ CREATE TABLE IF NOT EXISTS `login` (
 
 INSERT INTO `login` (`Id`, `Username`, `Email`, `Password`, `Status`) VALUES
 (1, 'ThomasMeijer', 'ThomasMeijer@Thomas.com', 'Thomas2007', 'Admin'),
-(2, 'ThomasTest', 'ThomasTest@Thomas.com', 'Thomas2007', 'User');
+(2, 'ThomasTest', 'ThomasTest@Thomas.com', 'Thomas2007', 'User'),
+(3, 'ImBanned', 'ImBanned@Banned.com', 'Thomas2007', 'Banned'),
+(4, 'Pigeon12000', 'ImAPigeon@ThePark.com', 'Thomas2007', 'Owner');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
